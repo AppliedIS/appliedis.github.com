@@ -1,0 +1,17 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div ng-controller="sidebarController as vm">
+    <md-content>
+        <div class="sidebar" md-colors="{ background: 'grey-900' }">
+            <h2 class="logo" md-colors="{ color: 'amber-600' }">{{ vm.logo }}</h2>
+            <delta-source-filter expanded="true"></delta-source-filter>
+            <delta-type-filter expanded="true"></delta-type-filter>
+            <delta-temporal-filter expanded="false" mode="search"></delta-temporal-filter>
+            <delta-goto expanded="false"></delta-goto>
+        </div>
+    </md-content>
+</div>

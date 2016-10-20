@@ -1,0 +1,12 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div ng-controller="mapController as vm" class="map-container" style="height: {{ vm.mapHeight }}px">
+    <leaflet lf-center="vm.center" width="100%" height="{{ vm.mapHeight }}" defaults="vm.defaults" layers="vm.layers"></leaflet>
+    <div class="loading" ng-if="vm.loading" style="height: {{ vm.mapHeight }}px">
+        <md-progress-circular class="md-accent"></md-progress-circular>
+    </div>
+</div>
