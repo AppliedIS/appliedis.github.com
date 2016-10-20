@@ -1,0 +1,12 @@
+<div class="row">
+    <div id="sidebar-container" class="col-xs-4 col-sm-3 col-md-2">
+        <sigma-sidebar mode="analyze"></sigma-sidebar>
+    </div>
+    <div id="map-container" class="col-xs-8 col-sm-9 col-md-10">
+        <sigma-playback></sigma-playback>
+        <sigma-map mode="analyze" bbox="bbox"></sigma-map>
+        <sigma-time-slider start="start" stop="stop" mode="playback"></sigma-time-slider>
+        <sigma-point-converter id="scatter-plot" y-property="intensity" x-property="time"></sigma-point-converter>
+        <sigma-correlation-analysis></sigma-correlation-analysis>
+    </div>
+</div>

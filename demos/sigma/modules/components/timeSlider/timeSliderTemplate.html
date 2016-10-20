@@ -1,0 +1,19 @@
+<div class="time-slider-container">
+    <div class="text-center" ng-show="!vm.sliderReady">
+        <div class="time-slider-loading">
+            <fading-circle-spinner></fading-circle-spinner>
+        </div>
+    </div>
+    <div ng-show="vm.sliderReady">
+        <div class="time-slider"></div>
+        <div class="time-slider-minimize">
+            <span class="badge" ng-click="vm.minimize()" data-title="Minimize Time Slider" data-placement="top" bs-tooltip><i class="fa fa-minus"></i></span>
+        </div>
+        <div class="time-slider-toggle" ng-show="vm.mode === 'search'">
+            <span class="badge" ng-click="vm.toggleBrush()" data-title="{{ vm.toggleBrushText }}" data-placement="top" bs-tooltip><i ng-class="vm.toggleBrushClass"></i></span>
+        </div>
+    </div>
+</div>
+<div class="time-slider-maximize">
+    <span class="badge" ng-click="vm.maximize()" data-title="Show Time Slider" data-placement="top" bs-tooltip><i class="fa fa-clock-o fa-2x"></i></span>
+</div>

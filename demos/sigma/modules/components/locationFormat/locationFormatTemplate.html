@@ -1,0 +1,10 @@
+<div class="text-center" ng-if="vm.mode === 'search'">
+    <a ng-click="vm.setFormat('dd');" href="" ng-class="{'label-default': vm.location.format !== 'dd', 'label-primary': vm.location.format === 'dd'}" class="label">DecimalDegrees</a>
+    <a ng-click="vm.setFormat('dms');" href="" ng-class="{'label-default': vm.location.format !== 'dms', 'label-primary': vm.location.format === 'dms'}" class="label">DMS</a>
+    <a ng-click="vm.setFormat('mgrs');" href="" ng-class="{'label-default': vm.location.format !== 'mgrs', 'label-primary': vm.location.format === 'mgrs'}" class="label">MGRS</a>
+</div>
+<div class="text-center" ng-if="vm.mode === 'analyze'">
+    <h5 ng-if="vm.location.format === 'dd'">Decimal Degrees</h5>
+    <h5 ng-if="vm.location.format === 'dms'">Degrees, Minutes, Seconds</h5>
+    <h5 ng-if="vm.location.format === 'mgrs'">MGRS</h5>
+</div>

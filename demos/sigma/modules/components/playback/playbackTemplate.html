@@ -1,0 +1,72 @@
+<div class="playback-controls-container">
+    <div class="playback-controls">
+        <div class="playback-control">
+            <sigma-aoi-analysis></sigma-aoi-analysis>
+        </div>
+        <div class="playback-control">
+            <div class="playback-interval-control">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" ng-model="vm.playbackIntervalQty" ng-change="vm.setIntervalQty()">
+                    <div class="input-group-btn">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-default btn-sm" bs-dropdown data-animation="am-flip-x" aria-haspopup="true" aria-expanded="false">
+                                {{ vm.playbackInterval.title }} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="interval in vm.playbackIntervals"><a ng-click="vm.setInterval(interval)">{{ interval.title }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playback-control">
+            <div class="btn-group btn-group-sm">
+                <button type="button" class="btn btn-default" ng-class="{'btn-warning': vm.playbackDirection === 'backward'}" ng-click="vm.sliderCtrl('backward')"><i class="fa fa-fast-backward"></i></button>
+                <button type="button" class="btn btn-default" ng-click="vm.sliderCtrl('stepBackward')" ng-disabled="vm.disableStepButton()"><i class="fa fa-step-backward"></i></button>
+                <button type="button" class="btn btn-default" ng-click="vm.sliderCtrl('playPause')" ng-disabled="vm.disablePlayPauseButton()">
+                    <i class="fa fa-play" ng-class="{'fa-play': vm.showPlayButton(), 'fa-pause': vm.showPauseButton()}"></i>
+                </button>
+                <button type="button" class="btn btn-default" ng-click="vm.sliderCtrl('stop')" ng-disabled="vm.playbackState === 'stop'"><i class="fa fa-stop"></i></button>
+                <button type="button" class="btn btn-default" ng-click="vm.sliderCtrl('stepForward')" ng-disabled="vm.disableStepButton()"><i class="fa fa-step-forward"></i></button>
+                <button type="button" class="btn btn-default" ng-class="{'btn-warning': vm.playbackDirection === 'forward'}" ng-click="vm.sliderCtrl('forward')"><i class="fa fa-fast-forward"></i></button>
+            </div>
+            <!-- <div class="playback-control">
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-default" ng-click="saveAnimation()"><i class="glyphicon glyphicon-save"></i></button>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="playback-control">
+            <button type="button" class="btn btn-sm btn-default" title="Playback" data-template-url="modules/components/playback/playbackControls.tpl.html" data-animation="am-flip-x" data-placement="bottom" data-container=".playback-controls" bs-popover>Playback <span class="caret"></span></button>
+        </div>
+
+        <div class="playback-control">
+            <button type="button"
+                    class="btn btn-sm btn-default"
+                    title="Export"
+                    data-template-url="modules/components/video/exportControls.tpl.html"
+                    data-animation="am-flip-x"
+                    data-placement="bottom"
+                    data-container=".playback-controls"
+                    bs-popover>
+                Export
+                <span class="caret"></span>
+            </button>
+        </div>
+
+        <div class="playback-control">
+            <button type="button" class="btn btn-sm btn-default" title="Filters" ng-click="vm.playbackToggleAside()">Filters</button>
+        </div>
+    </div>
+    <div class="playback-controls-minimize">
+        <span class="badge" ng-click="vm.minimize()" data-title="Minimize Playback" data-placement="bottom" bs-tooltip><i class="fa fa-minus"></i></span>
+    </div>
+    <!--<div class="playback-images-loading">
+        <div ng-show="vm.numImagesLoaded < vm.totalImages"><fading-circle-spinner></fading-circle-spinner></div>
+    </div>-->
+</div>
+<div class="playback-controls-maximize">
+    <span class="badge" ng-click="vm.maximize()" data-title="Show Playback" data-placement="bottom" bs-tooltip><i class="fa fa-play-circle-o fa-2x"></i></span>
+</div>

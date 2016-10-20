@@ -1,0 +1,32 @@
+<div ng-if="vm.sigmaConfig.components.aoiAnalysis">
+    <div class="aoi-analysis">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm btn-block dropdown-toggle" bs-dropdown data-animation="am-flip-x" aria-haspopup="true" aria-expanded="false">AOI Analysis <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="value in vm.aoiAnalysisValues"><a ng-click="vm.analyzeAoi(value)">{{ value.title }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="analysisModal.html">
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" ng-click="$hide()">&times;</button>
+                        <h4 class="modal-title">{{ vm.selectedAnalysis }}</h4>
+
+                    </div>
+                    <div class="modal-body text-center">
+                        <div id="analysisImage"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <a ng-href="{{ vm.geotiffLink }}" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
+                        <button class="btn btn-primary" ng-click="$hide()"><i class="fa fa-close"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>

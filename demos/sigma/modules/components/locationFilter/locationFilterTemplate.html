@@ -1,0 +1,90 @@
+<div class="section">
+    <div class="header location-filter-header" ng-click="vm.toggleExpanded()">
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>
+                    <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                    Location
+                </h4>
+            </div>
+            <div class="col-xs-6 text-right">
+                <span ng-show="vm.mode === 'analyze' && vm.spatialZoom !== ''" class="badge margin-top-md" data-title="Represents a data sampling rate during image playback. To see all data (1X), return to the Search screen and decrease the size of the AOI." data-container="body" data-placement="right" bs-tooltip>Spatial Zoom: {{ vm.spatialZoom }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="location-filter" ng-show="vm.expanded">
+        <form name="locationFilter">
+            <div class="row" ng-if="vm.location.format !== 'mgrs'">
+                <div class="col-sm-6">
+                    <div class="form-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input class="form-control input-sm" id="north" name="north" ng-model="vm.location.north" min="-90" max="90" ng-model-options="{ debounce: 250 }" required/>
+                        <label class="control-label" for="north">Latitude N</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>Latitude N</h5>
+                        <span class="value">{{ vm.location.north }}</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input class="form-control input-sm" id="east" name="east" ng-model="vm.location.east" min="-180" max="180" ng-model-options="{ debounce: 250 }"  required />
+                        <label class="control-label" for="east">Longitude E</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>Longitude E</h5>
+                        <span class="value">{{ vm.location.east }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="vm.location.format === 'mgrs'">
+                <div class="col-sm-12">
+                    <div class="form-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input type="text" name="northeast" class="form-control input-sm" ng-model="vm.location.mgrsNE" required/>
+                        <label class="control-label">NE Lat/Lng</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>NE Lat/Lon</h5>
+                        <span class="value">{{ vm.location.mgrsNE }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="vm.location.format !== 'mgrs'">
+                <div class="col-sm-6">
+                    <div class="form-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input class="form-control input-sm" id="south" name="south" ng-model="vm.location.south" min="-90" max="90" ng-model-options="{ debounce: 250 }" required/>
+                        <label class="control-label" for="south" >Latitude S</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>Latitude S</h5>
+                        <span class="value">{{ vm.location.south }}</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input class="form-control input-sm" id="west" name="west" ng-model="vm.location.west" min="-180" max="180" ng-model-options="{ debounce: 250 }"  required />
+                        <label class="control-label" for="west">Longitude W</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>Longitude W</h5>
+                        <span class="value">{{ vm.location.west }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="vm.location.format === 'mgrs'">
+                <div class="col-sm-12">
+                    <div class="form-group input-container" ng-if="vm.mode === 'search'" show-errors>
+                        <input type="text" name="southwest" class="form-control input-sm" ng-model="vm.location.mgrsSW" required/>
+                        <label class="control-label">SW Lat/Lng</label>
+                    </div>
+                    <div ng-if="vm.mode === 'analyze'">
+                        <h5>SW Lat/Lon</h5>
+                        <span class="value">{{ vm.location.mgrsSW }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-top-md margin-bottom-md">
+                <sigma-location-format></sigma-location-format>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="section">
+    <div class="header temporal-filter-header" ng-click="vm.toggleExpanded()">
+        <div class="row">
+            <div ng-class="{ 'col-xs-6': vm.mode === 'analyze', 'col-xs-12': vm.mode !== 'analyze' }">
+                <h4>
+                    <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                    Date/Time
+                </h4>
+            </div>
+            <div class="col-xs-6 text-right" ng-show="vm.mode === 'analyze' && vm.temporalZoom !== ''">
+                <span class="badge margin-top-md" data-title="Represents a data sampling rate during image playback. To see all data (1X), return to the Search screen and decrease the duration of the time window." data-container="body" data-placement="right" bs-tooltip>Temporal Zoom: {{ vm.temporalZoom }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="temporal-filter" ng-show="vm.expanded">
+        <div ng-show="vm.mode === 'search'">
+            <div class="section">
+                <div class="header" ng-click="vm.toggleExpandedFilter()">
+                    <h5>
+                        <span class="fa" ng-class="vm.expandedRange ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                        Range
+                    </h5>
+                </div>
+                <div class="range-filter" ng-show="vm.expandedRange">
+                    <h5>Start Date</h5>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div id="startDate" class="input-container"><input type="text" class="form-control input-sm" ng-model="vm.start" ng-change="vm.setTemporalFilter()" name="startDate" data-autoclose="true" data-timezone="UTC" data-date-format="yyyy-MM-dd" data-date-type="iso" data-container="body" bs-datepicker></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div id="startTime" class="input-container"><input type="text" class="form-control input-sm" ng-model="vm.start" ng-change="vm.setTemporalFilter()" name="startTime" data-autoclose="true" data-timezone="UTC" data-time-format="HH:mm:ss" data-time-type="iso" data-container="body" bs-timepicker></div>
+                        </div>
+                    </div>
+                    <h5>End Date</h5>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div id="stopDate" class="input-container"><input type="text" class="form-control input-sm" ng-model="vm.stop" ng-change="vm.setTemporalFilter()" name="stopDate" data-autoclose="true" data-timezone="UTC" data-date-format="yyyy-MM-dd" data-date-type="iso" data-container="body" bs-datepicker></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div id="stopTime" class="input-container"><input type="text" class="form-control input-sm" ng-model="vm.stop" ng-change="vm.setTemporalFilter()" name="stopTime" data-autoclose="true" data-timezone="UTC" data-time-format="HH:mm:ss" data-time-type="iso" data-container="body" bs-timepicker></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center margin-top-md margin-bottom-md">
+                            <span ng-repeat="range in vm.ranges" class="label label-default margin-right-md" ng-click="vm.setRange(range.units, range.unitOfTime)">{{ range.label }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section margin-bottom-md">
+                <div class="header" ng-click="vm.toggleExpandedFilter()">
+                    <h5>
+                        <span class="fa" ng-class="vm.expandedDuration ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                        Duration
+                    </h5>
+                </div>
+                <div class="duration-filter" ng-show="vm.expandedDuration">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="input-container">
+                                <input type="text" class="form-control input-sm" ng-model="vm.durationLength" ng-change="vm.setTemporalFilter()">
+                            </div>
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="input-container">
+                                <select class="form-control input-sm" ng-model="vm.selectedDuration" ng-options="duration as duration.label for duration in vm.durations track by duration.value" ng-change="vm.setTemporalFilter()"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="vm.mode === 'analyze'">
+            <h5>Start Date</h5>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="value">{{ vm.moment.utc(vm.start).format('YYYY-MM-DD HH:mm:ss') }}Z</span>
+                </div>
+            </div>
+            <h5>End Date</h5>
+            <div class="row margin-bottom-md">
+                <div class="col-xs-12">
+                    <span class="value">{{ vm.moment.utc(vm.stop).format('YYYY-MM-DD HH:mm:ss') }}Z</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

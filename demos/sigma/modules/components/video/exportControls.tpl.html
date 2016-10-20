@@ -1,0 +1,98 @@
+<div class="popover export-controls" role="tooltip">
+    <div class="arrow"></div>
+    <div class="popover-content">
+
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="include-base">
+                    Include base layer
+                </label>
+            </div>
+            <div class="col-xs-8">
+                <toggle-switch class="switch-success"
+                               id="include-base"
+                               ng-model="vm.exportBaseLayer">
+                </toggle-switch>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="include-labels">
+                    Labels
+                </label>
+            </div>
+            <div class="col-xs-8">
+                <toggle-switch class="switch-success"
+                               id="include-labels"
+                               ng-model="vm.exportLabels">
+                </toggle-switch>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="format">
+                    Format
+                </label>
+            </div>
+            <div class="col-xs-8">
+                <div class="btn-group" ng-model="vm.exportFormat" bs-radio-group>
+                    <label class="btn btn-default" ng-repeat="format in vm.exportFormats track by $index">
+                        <input type="radio" class="btn btn-default" ng-value="format">
+                        {{ format}}
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-hide="vm.exportFormat === 'gif'">
+            <div class="col-xs-4">
+                <label for="loops">
+                    Number of loops
+                </label>
+            </div>
+            <div class="col-xs-8">
+                <input id="loops"
+                       type="range"
+                       min="{{ vm.exportLoops.min }}"
+                       max="{{ vm.exportLoops.max }}"
+                       step="{{ vm.exportLoops.step }}"
+                       ng-model="vm.exportLoops.value"
+                       data-title="{{ vm.exportLoops.value }}"
+                       data-placement="bottom"
+                       bs-tooltip>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="file-name">Save as</label>
+            </div>
+            <div class="col-xs-8">
+                <div class="input-group">
+                    <input id="file-name"
+                           class="form-control"
+                           type="text"
+                           ng-model="vm.exportFilename">
+                    <span class="input-group-addon">
+                        .{{ vm.exportFormat }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button"
+                        class="btn btn-sm btn-primary"
+                        ng-click="vm.export()"
+                        ng-disabled="! vm.exportFormat">
+                    <i class="glyphicon glyphicon-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

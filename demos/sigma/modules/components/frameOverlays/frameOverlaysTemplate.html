@@ -1,0 +1,20 @@
+<div class="section">
+    <div class="header" ng-click="vm.toggleExpanded()">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            Frame Overlays
+        </h4>
+    </div>
+    <div ng-show="vm.expanded">
+        <div class="form-group margin-bottom-lg">
+            <label for="contrastLevel">Playback Contrast:</label>
+            <select id="contrastLevel" class="form-control" ng-model="vm.selectedContrastLevel" ng-change="vm.setContrastLevel()" ng-options="contrastLevel as contrastLevel.title for contrastLevel in vm.contrastLevels"></select>
+        </div>
+        <ul class="overlays-list list-group" ng-show="vm.playbackState === 'pause' || vm.playbackState === 'step'">
+            <li class="list-group-item" ng-repeat="overlay in vm.frameOverlays" ng-class="{ disabled: !overlay.enabled }" ng-mouseenter="vm.highlightImage(overlay, true)" ng-mouseleave="vm.highlightImage(overlay, false)" ng-click="vm.toggleImage(overlay)" data-html="true" data-title="{{ vm.getOverlayTooltip(overlay) }}" data-placement="right" bs-tooltip>
+                <span class="badge"><i class="fa" ng-class="{'fa-remove': overlay.enabled, 'fa-plus': !overlay.enabled }"></i></span>
+                Image {{ $index + 1 }}
+            </li>
+        </ul>
+    </div>
+</div>

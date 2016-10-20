@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Demos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-light_blue.min.css" />
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+<body>
+  <style>
+    .demo-card-wide.mdl-card {
+      width: 512px;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #333;
+      height: 176px;
+      background-color: #999;
+    }
+
+    .mdl-layout__header-row {
+      background-color: rgb(96,125,139);
+      color: #fff;
+      padding: 5px;
+      margin: 0px;
+      line-height:40px;
+      font-size: 36px;
+    }
+
+    .scale-title {
+      background: url('assets/scale-screenshot.jpg') center / cover;
+    }
+
+    .sigma-title {
+      background: url('assets/sigma-screenshot.jpg') center / cover;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #999;
+    }
+  </style>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div><h2 class="mdl-layout__header-row">Scale</h2></div>
+        <div class="mdl-card__title scale-title">
+        <h2 class="mdl-card__title-text"></h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of
+          algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="https://dickmancj.github.io/ui-demos/scale/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Demo
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div><h2 class="mdl-layout__header-row">Sigma</h2></div>
+        <div class="mdl-card__title sigma-title">
+          <h2 class="mdl-card__title-text"></h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <h2 class="mdl-card__title-text"></h2>
+          Sigma enables interactive analysis of large, geospatial datasets. The app utilizes WebGL for high
+          performance visualizations.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="https://dickmancj.github.io/ui-demos/sigma/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

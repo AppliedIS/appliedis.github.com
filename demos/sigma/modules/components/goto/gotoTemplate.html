@@ -1,0 +1,34 @@
+<div class="section" ng-if="vm.sigmaConfig.components.goto">
+    <div class="header location-filter-header" ng-click="vm.toggleExpanded()">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            GoTo
+        </h4>
+    </div>
+    <div class="goto" ng-show="vm.expanded">
+        <div ng-if="vm.locationFormat !== 'mgrs'">
+            <div class="form-group input-container">
+                <input type="text" name="latitude" class="form-control input-sm" ng-model="vm.lat" />
+                <label class="control-label">Latitude</label>
+            </div>
+            <div class="form-group input-container">
+                <input type="text" name="longitude" class="form-control input-sm" ng-model="vm.lng" />
+                <label class="control-label">Longitude</label>
+            </div>
+        </div>
+        <div ng-if="vm.locationFormat === 'mgrs'">
+            <div class="form-group input-container">
+                <input type="text" name="mgrs" class="form-control input-sm" ng-model="vm.mgrs" />
+                <label class="control-label">Lat/Lng</label>
+            </div>
+        </div>
+        <div class="margin-bottom-lg">
+            <sigma-location-format></sigma-location-format>
+        </div>
+        <div class="row margin-bottom-md">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <a href="" class="btn btn-sm btn-default btn-block" ng-click="vm.goto()">Go</a>
+            </div>
+        </div>
+    </div>
+</div>

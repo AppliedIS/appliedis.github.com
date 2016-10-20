@@ -1,0 +1,32 @@
+<div class="section" data-ng-if="vm.enableCoverageComponent">
+    <div class="header" ng-click="vm.toggleExpanded()">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            Coverage
+            <div class="pull-right">
+
+            </div>
+        </h4>
+    </div>
+    <div class="coverage-filter" ng-show="vm.expanded">
+        <div class="row">
+            <div class="col-xs-5">
+                <!--<div class="checkbox">-->
+                    <!--<label>-->
+                        <!--<input type="checkbox" ng-model="coverageEnabled">-->
+                        <!--Enabled-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<input type="checkbox" bs-switch ng-model="coverageEnabled" data-label-width="1" switch-on-color="success">-->
+                <toggle-switch ng-model="vm.coverageEnabled" class="switch-success switch-small"></toggle-switch>
+            </div>
+            <div class="col-xs-7">
+                <div class="playback-opacity">
+                    <input type="range" min="{{ vm.coverageOpacitySlider.min }}" max="{{ vm.coverageOpacitySlider.max }}" value="{{ vm.coverageOpacitySlider.value }}" step=".01" ng-model="vm.coverageOpacitySlider.value" tooltip="{{(vm.coverageOpacitySlider.value*100).toFixed(0)}}%" tooltip-placement="bottom">
+                    <span class="badge">Opacity</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

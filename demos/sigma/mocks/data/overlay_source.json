@@ -1,0 +1,1426 @@
+{
+  "start": "2014-12-01 00:00:00+00:00",
+  "spatialZoom": "2x",
+  "e": -85.1217269897461,
+  "w": -85.7589340209961,
+  "frame": [
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015006LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5213,
+          -83.29453
+        ],
+        [
+          46.3499,
+          -86.30004
+        ]
+      ],
+      "time": "2015-01-06 16:27:22.552000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015022LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5213,
+          -83.29453
+        ],
+        [
+          46.3499,
+          -86.30004
+        ]
+      ],
+      "time": "2015-01-22 16:27:16.668000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015038LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52138,
+          -83.30638
+        ],
+        [
+          46.34758,
+          -86.31178
+        ]
+      ],
+      "time": "2015-02-07 16:27:13.540000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015054LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52143,
+          -83.31417
+        ],
+        [
+          46.34783,
+          -86.31959
+        ]
+      ],
+      "time": "2015-02-23 16:27:07.821000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015070LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52138,
+          -83.30638
+        ],
+        [
+          46.34758,
+          -86.31178
+        ]
+      ],
+      "time": "2015-03-11 16:26:56.899000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015086LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52143,
+          -83.31417
+        ],
+        [
+          46.34783,
+          -86.31959
+        ]
+      ],
+      "time": "2015-03-27 16:26:48.889000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015102LGN01_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52153,
+          -83.32973
+        ],
+        [
+          46.34833,
+          -86.3352
+        ]
+      ],
+      "time": "2015-04-12 16:26:42.412000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015118LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52165,
+          -83.34918
+        ],
+        [
+          46.34896,
+          -86.35471
+        ]
+      ],
+      "time": "2015-04-28 16:26:35.867000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015134LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52155,
+          -83.33362
+        ],
+        [
+          46.34846,
+          -86.3391
+        ]
+      ],
+      "time": "2015-05-14 16:26:19.581000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015150LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52109,
+          -83.2634
+        ],
+        [
+          46.34888,
+          -86.26882
+        ]
+      ],
+      "time": "2015-05-30 16:26:25.015000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015166LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5212,
+          -83.27508
+        ],
+        [
+          46.34927,
+          -86.28443
+        ]
+      ],
+      "time": "2015-06-15 16:26:36.790000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015182LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52115,
+          -83.27137
+        ],
+        [
+          46.34644,
+          -86.27666
+        ]
+      ],
+      "time": "2015-07-01 16:26:43.223000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015198LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52123,
+          -83.27897
+        ],
+        [
+          46.34939,
+          -86.28833
+        ]
+      ],
+      "time": "2015-07-17 16:26:53.257000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015214LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52112,
+          -83.26729
+        ],
+        [
+          46.34901,
+          -86.27272
+        ]
+      ],
+      "time": "2015-08-02 16:26:56.734000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015230LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52112,
+          -83.26729
+        ],
+        [
+          46.34901,
+          -86.27272
+        ]
+      ],
+      "time": "2015-08-18 16:27:03.800000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015246LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52109,
+          -83.2634
+        ],
+        [
+          46.34888,
+          -86.26882
+        ]
+      ],
+      "time": "2015-09-03 16:27:08.364000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015262LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52123,
+          -83.28304
+        ],
+        [
+          46.34682,
+          -86.28836
+        ]
+      ],
+      "time": "2015-09-19 16:27:17.332000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015278LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52123,
+          -83.28286
+        ],
+        [
+          46.34952,
+          -86.28833
+        ]
+      ],
+      "time": "2015-10-05 16:27:20.626000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220272015294LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.52123,
+          -83.27897
+        ],
+        [
+          46.34939,
+          -86.28833
+        ]
+      ],
+      "time": "2015-10-21 16:27:23.096000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015006LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0955,
+          -83.8544
+        ],
+        [
+          44.9355,
+          -86.78946
+        ]
+      ],
+      "time": "2015-01-06 16:27:46.437000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015022LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0955,
+          -83.8544
+        ],
+        [
+          44.9355,
+          -86.78946
+        ]
+      ],
+      "time": "2015-01-22 16:27:40.553000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015038LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09553,
+          -83.86579
+        ],
+        [
+          44.93581,
+          -86.80468
+        ]
+      ],
+      "time": "2015-02-07 16:27:37.420000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015054LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09554,
+          -83.87353
+        ],
+        [
+          44.93333,
+          -86.8123
+        ]
+      ],
+      "time": "2015-02-23 16:27:31.701000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015070LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09552,
+          -83.86579
+        ],
+        [
+          44.93581,
+          -86.80087
+        ]
+      ],
+      "time": "2015-03-11 16:27:20.780000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015086LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09554,
+          -83.87338
+        ],
+        [
+          44.93602,
+          -86.80848
+        ]
+      ],
+      "time": "2015-03-27 16:27:12.770000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015102LGN01_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09557,
+          -83.88857
+        ],
+        [
+          44.93644,
+          -86.82751
+        ]
+      ],
+      "time": "2015-04-12 16:27:06.286000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015118LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0956,
+          -83.91149
+        ],
+        [
+          44.93436,
+          -86.84654
+        ]
+      ],
+      "time": "2015-04-28 16:26:59.747000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015134LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09557,
+          -83.89251
+        ],
+        [
+          44.93384,
+          -86.82752
+        ]
+      ],
+      "time": "2015-05-14 16:26:43.460000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015150LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09814,
+          -83.82782
+        ],
+        [
+          44.93476,
+          -86.76282
+        ]
+      ],
+      "time": "2015-05-30 16:26:48.904000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015166LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09817,
+          -83.83921
+        ],
+        [
+          44.93508,
+          -86.77424
+        ]
+      ],
+      "time": "2015-06-15 16:27:00.679000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015182LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09816,
+          -83.83542
+        ],
+        [
+          44.93498,
+          -86.77043
+        ]
+      ],
+      "time": "2015-07-01 16:27:07.105000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015198LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09818,
+          -83.84301
+        ],
+        [
+          44.93519,
+          -86.77804
+        ]
+      ],
+      "time": "2015-07-17 16:27:17.145000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015214LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09814,
+          -83.82782
+        ],
+        [
+          44.93476,
+          -86.76282
+        ]
+      ],
+      "time": "2015-08-02 16:27:20.623000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015230LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09815,
+          -83.83162
+        ],
+        [
+          44.93487,
+          -86.76663
+        ]
+      ],
+      "time": "2015-08-18 16:27:27.688000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015246LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09814,
+          -83.82782
+        ],
+        [
+          44.93476,
+          -86.76282
+        ]
+      ],
+      "time": "2015-09-03 16:27:32.245000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015262LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09818,
+          -83.84301
+        ],
+        [
+          44.93519,
+          -86.78185
+        ]
+      ],
+      "time": "2015-09-19 16:27:41.213000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015278LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09818,
+          -83.84301
+        ],
+        [
+          44.93519,
+          -86.77804
+        ]
+      ],
+      "time": "2015-10-05 16:27:44.515000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80220282015294LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09818,
+          -83.84301
+        ],
+        [
+          44.93519,
+          -86.77804
+        ]
+      ],
+      "time": "2015-10-21 16:27:46.985000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015013LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51218,
+          -84.79548
+        ],
+        [
+          46.35632,
+          -87.87606
+        ]
+      ],
+      "time": "2015-01-13 16:33:32.641000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015029LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51218,
+          -84.79938
+        ],
+        [
+          46.3564,
+          -87.87606
+        ]
+      ],
+      "time": "2015-01-29 16:33:27.642000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015045LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51224,
+          -84.79158
+        ],
+        [
+          46.35624,
+          -87.86793
+        ]
+      ],
+      "time": "2015-02-14 16:33:18.519000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015077LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51209,
+          -84.80717
+        ],
+        [
+          46.35654,
+          -87.88824
+        ]
+      ],
+      "time": "2015-03-18 16:33:05.340000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015093LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51218,
+          -84.79938
+        ],
+        [
+          46.3564,
+          -87.87606
+        ]
+      ],
+      "time": "2015-04-03 16:32:52.831000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015109LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5118,
+          -84.84614
+        ],
+        [
+          46.35729,
+          -87.92479
+        ]
+      ],
+      "time": "2015-04-19 16:32:52.817000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015125LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51186,
+          -84.83834
+        ],
+        [
+          46.35714,
+          -87.91667
+        ]
+      ],
+      "time": "2015-05-05 16:32:39.045000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015141LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51239,
+          -84.7721
+        ],
+        [
+          46.35587,
+          -87.84762
+        ]
+      ],
+      "time": "2015-05-21 16:32:33.348000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015157LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51239,
+          -84.7721
+        ],
+        [
+          46.35587,
+          -87.84762
+        ]
+      ],
+      "time": "2015-06-06 16:32:42.229000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015173LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51242,
+          -84.76431
+        ],
+        [
+          46.35571,
+          -87.84356
+        ]
+      ],
+      "time": "2015-06-22 16:32:49.422000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015189LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51233,
+          -84.776
+        ],
+        [
+          46.35594,
+          -87.85575
+        ]
+      ],
+      "time": "2015-07-08 16:32:59.534000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015205LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51236,
+          -84.7721
+        ],
+        [
+          46.35587,
+          -87.85169
+        ]
+      ],
+      "time": "2015-07-24 16:33:06.179000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015221LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51248,
+          -84.75652
+        ],
+        [
+          46.35556,
+          -87.83544
+        ]
+      ],
+      "time": "2015-08-09 16:33:09.606000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015237LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51245,
+          -84.76431
+        ],
+        [
+          46.35571,
+          -87.8395
+        ]
+      ],
+      "time": "2015-08-25 16:33:17.345000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015253LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51239,
+          -84.76821
+        ],
+        [
+          46.35579,
+          -87.84762
+        ]
+      ],
+      "time": "2015-09-10 16:33:23.776000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015269LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51233,
+          -84.7799
+        ],
+        [
+          46.35602,
+          -87.85575
+        ]
+      ],
+      "time": "2015-09-26 16:33:30.373000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230272015285LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51242,
+          -84.76821
+        ],
+        [
+          46.35579,
+          -87.84356
+        ]
+      ],
+      "time": "2015-10-12 16:33:30.876000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282014362LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08751,
+          -85.34462
+        ],
+        [
+          44.94254,
+          -88.37021
+        ]
+      ],
+      "time": "2014-12-28 16:33:57.827000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015013LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08737,
+          -85.35982
+        ],
+        [
+          44.94276,
+          -88.38206
+        ]
+      ],
+      "time": "2015-01-13 16:33:56.521000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015029LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08732,
+          -85.36362
+        ],
+        [
+          44.94281,
+          -88.38601
+        ]
+      ],
+      "time": "2015-01-29 16:33:51.523000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015045LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08742,
+          -85.35222
+        ],
+        [
+          44.94265,
+          -88.37811
+        ]
+      ],
+      "time": "2015-02-14 16:33:42.393000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015077LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08723,
+          -85.37122
+        ],
+        [
+          44.94292,
+          -88.39392
+        ]
+      ],
+      "time": "2015-03-18 16:33:29.224000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015093LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08732,
+          -85.35982
+        ],
+        [
+          44.94276,
+          -88.38601
+        ]
+      ],
+      "time": "2015-04-03 16:33:16.716000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015109LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08674,
+          -85.40551
+        ],
+        [
+          44.9407,
+          -88.43343
+        ]
+      ],
+      "time": "2015-04-19 16:33:16.699000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015125LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08689,
+          -85.39783
+        ],
+        [
+          44.9433,
+          -88.42158
+        ]
+      ],
+      "time": "2015-05-05 16:33:02.920000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015141LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08765,
+          -85.33709
+        ],
+        [
+          44.93973,
+          -88.35835
+        ]
+      ],
+      "time": "2015-05-21 16:32:57.238000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015157LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08765,
+          -85.33321
+        ],
+        [
+          44.94237,
+          -88.35835
+        ]
+      ],
+      "time": "2015-06-06 16:33:06.112000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015173LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0877,
+          -85.32941
+        ],
+        [
+          44.94232,
+          -88.3544
+        ]
+      ],
+      "time": "2015-06-22 16:33:13.312000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015189LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08756,
+          -85.34081
+        ],
+        [
+          44.94248,
+          -88.36626
+        ]
+      ],
+      "time": "2015-07-08 16:33:23.424000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015205LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.09035,
+          -85.33701
+        ],
+        [
+          44.94243,
+          -88.35842
+        ]
+      ],
+      "time": "2015-07-24 16:33:30.069000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015221LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08784,
+          -85.32181
+        ],
+        [
+          44.9422,
+          -88.34255
+        ]
+      ],
+      "time": "2015-08-09 16:33:33.489000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015237LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08775,
+          -85.32941
+        ],
+        [
+          44.94232,
+          -88.35045
+        ]
+      ],
+      "time": "2015-08-25 16:33:41.229000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015253LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0877,
+          -85.33321
+        ],
+        [
+          44.94237,
+          -88.3544
+        ]
+      ],
+      "time": "2015-09-10 16:33:47.667000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015269LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.08756,
+          -85.34081
+        ],
+        [
+          44.94248,
+          -88.36626
+        ]
+      ],
+      "time": "2015-09-26 16:33:54.257000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC80230282015285LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.0877,
+          -85.33321
+        ],
+        [
+          44.94237,
+          -88.3544
+        ]
+      ],
+      "time": "2015-10-12 16:33:54.767000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015194LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13738,
+          -83.41138
+        ],
+        [
+          44.90622,
+          -86.43197
+        ]
+      ],
+      "time": "2015-07-13 03:17:01.603000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015210LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13732,
+          -83.39621
+        ],
+        [
+          44.90574,
+          -86.42055
+        ]
+      ],
+      "time": "2015-07-29 03:17:06.534000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015226LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13725,
+          -83.38862
+        ],
+        [
+          44.9055,
+          -86.40914
+        ]
+      ],
+      "time": "2015-08-14 03:17:11.799000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015242LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13725,
+          -83.38483
+        ],
+        [
+          44.90538,
+          -86.40914
+        ]
+      ],
+      "time": "2015-08-30 03:17:17.983000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015258LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.1373,
+          -83.39242
+        ],
+        [
+          44.90562,
+          -86.41675
+        ]
+      ],
+      "time": "2015-09-15 03:17:25.588000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015274LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13728,
+          -83.39242
+        ],
+        [
+          44.90562,
+          -86.41295
+        ]
+      ],
+      "time": "2015-10-01 03:17:30.607000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152162015290LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.13719,
+          -83.37725
+        ],
+        [
+          44.90514,
+          -86.39773
+        ]
+      ],
+      "time": "2015-10-17 03:17:30.674000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015194LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.90378
+        ],
+        [
+          46.33294,
+          -87.00271
+        ]
+      ],
+      "time": "2015-07-13 03:17:25.488000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015210LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.89211
+        ],
+        [
+          46.33262,
+          -86.987
+        ]
+      ],
+      "time": "2015-07-29 03:17:30.418000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015226LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.88043
+        ],
+        [
+          46.3323,
+          -86.9792
+        ]
+      ],
+      "time": "2015-08-14 03:17:35.683000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015242LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.87654
+        ],
+        [
+          46.3322,
+          -86.9753
+        ]
+      ],
+      "time": "2015-08-30 03:17:41.871000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015258LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.88432
+        ],
+        [
+          46.33241,
+          -86.9831
+        ]
+      ],
+      "time": "2015-09-15 03:17:49.477000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015274LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.88432
+        ],
+        [
+          46.33241,
+          -86.9831
+        ]
+      ],
+      "time": "2015-10-01 03:17:54.496000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81152172015290LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.5479,
+          -83.86875
+        ],
+        [
+          46.33198,
+          -86.96749
+        ]
+      ],
+      "time": "2015-10-17 03:17:54.563000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015201LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10516,
+          -84.93418
+        ],
+        [
+          44.93585,
+          -87.96341
+        ]
+      ],
+      "time": "2015-07-20 03:23:15.198000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015217LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10535,
+          -84.91518
+        ],
+        [
+          44.9355,
+          -87.93969
+        ]
+      ],
+      "time": "2015-08-05 03:23:17.892000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015233LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10532,
+          -84.91898
+        ],
+        [
+          44.93557,
+          -87.94365
+        ]
+      ],
+      "time": "2015-08-21 03:23:25.975000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015249LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10535,
+          -84.91518
+        ],
+        [
+          44.9355,
+          -87.93969
+        ]
+      ],
+      "time": "2015-09-06 03:23:31.173000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015265LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10525,
+          -84.92658
+        ],
+        [
+          44.93571,
+          -87.95155
+        ]
+      ],
+      "time": "2015-09-22 03:23:39.291000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015281LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10532,
+          -84.91898
+        ],
+        [
+          44.93557,
+          -87.94365
+        ]
+      ],
+      "time": "2015-10-08 03:23:41.599000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162162015297LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          47.10532,
+          -84.91898
+        ],
+        [
+          44.93557,
+          -87.94365
+        ]
+      ],
+      "time": "2015-10-24 03:23:45.209000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015201LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51581,
+          -85.42699
+        ],
+        [
+          46.36405,
+          -88.55455
+        ]
+      ],
+      "time": "2015-07-20 03:23:39.085000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015217LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51614,
+          -85.40749
+        ],
+        [
+          46.36378,
+          -88.53018
+        ]
+      ],
+      "time": "2015-08-05 03:23:41.778000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015233LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51608,
+          -85.41139
+        ],
+        [
+          46.36384,
+          -88.53424
+        ]
+      ],
+      "time": "2015-08-21 03:23:49.861000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015249LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51614,
+          -85.40749
+        ],
+        [
+          46.36378,
+          -88.53018
+        ]
+      ],
+      "time": "2015-09-06 03:23:55.059000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015265LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51598,
+          -85.41919
+        ],
+        [
+          46.36395,
+          -88.54237
+        ]
+      ],
+      "time": "2015-09-22 03:24:03.177000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015281LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51608,
+          -85.41139
+        ],
+        [
+          46.36384,
+          -88.53424
+        ]
+      ],
+      "time": "2015-10-08 03:24:05.492000"
+    },
+    {
+      "url": "http://varnerbox.com/overlay-image/LC81162172015297LGN00_thumb_large.jpg",
+      "bounds": [
+        [
+          48.51339,
+          -85.41139
+        ],
+        [
+          46.36384,
+          -88.53416
+        ]
+      ],
+      "time": "2015-10-24 03:24:09.089000"
+    }
+  ],
+  "temporalZoom": "1x",
+  "stop": "2015-12-01 00:00:00+00:00",
+  "s": 47.08508535995384,
+  "n": 47.502358951968574
+}

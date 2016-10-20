@@ -1,0 +1,18 @@
+<div class="section" data-ng-if="vm.bands.length > 1">
+    <div class="header" ng-click="vm.toggleExpanded()">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            Band
+        </h4>
+    </div>
+    <div class="band margin-top-md margin-bottom-md" ng-show="vm.expanded">
+        <div class="form-group" ng-if="vm.mode === 'search'">
+            <label for="band" class="sr-only">Band:</label>
+            <select id="band" class="form-control" ng-model="vm.selectedBand" ng-change="vm.setBand(vm.selectedBand)" ng-options="band as band.title for band in vm.bands"></select>
+        </div>
+        <div ng-if="vm.mode === 'analyze'">
+            <h5>Selected Band</h5>
+            <span class="value">{{ vm.selectedBand.title }}</span>
+        </div>
+    </div>
+</div>

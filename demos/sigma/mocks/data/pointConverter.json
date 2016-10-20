@@ -1,0 +1,274 @@
+{
+  "collects": [
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "11816",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2014-08-01T16:16:07",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302014213LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "34529",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2014-08-17T16:16:13",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302014229LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "9574",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2014-09-02T16:16:16",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302014245LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "8740",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2014-11-05T16:16:22",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302014309LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "10764",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2014-11-21T16:16:18",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302014325LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "16295",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-01-08T16:16:12",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015008LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "16930",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-01-24T16:16:06",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015024LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "15212",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-02-09T16:16:01",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015040LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "16894",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-02-25T16:15:57",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015056LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "14295",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-03-13T16:15:45",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015072LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "15750",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-03-29T16:15:36",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015088LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "9970",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-04-14T16:15:32",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015104LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "10888",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-04-30T16:15:23",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015120LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "12319",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-05-16T16:15:10",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015136LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "14369",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-06-01T16:15:16",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015152LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "11347",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-06-17T16:15:27",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015168LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "14351",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-07-03T16:15:34",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015184LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "11599",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-07-19T16:15:43",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015200LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "24258",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-08-04T16:15:46",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015216LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "10539",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-08-20T16:15:54",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015232LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "12167",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 2,
+      "slx": 1,
+      "time": "2015-09-05T16:15:59",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015248LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "VIS",
+      "gx": 1,
+      "intensity": "8982",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-09-21T16:16:08",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015264LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "SWIR",
+      "gx": 1,
+      "intensity": "9041",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-10-07T16:16:10",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015280LGN00_thumb_large.jpg"
+    },
+    {
+      "band": "MWIR",
+      "gx": 1,
+      "intensity": "9795",
+      "lx": 1,
+      "ox": 1,
+      "sensor": 1,
+      "slx": 1,
+      "time": "2015-10-23T16:16:13",
+      "url": "http://varnerbox.com:5000/overlay-image/LC80200302015296LGN00_thumb_large.jpg"
+    }
+  ],
+  "point": {
+    "lat": 42.5,
+    "lon": -84.1
+  },
+  "start": "2010-01-01 00:00:00",
+  "stop": "2020-01-01 00:00:00"
+}

@@ -1,0 +1,50 @@
+<div class="popover" role="tooltip">
+    <div class="arrow"></div>
+    <div class="popover-content">
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="playback-speed">Speed</label>
+            </div>
+            <div class="col-xs-10">
+                <input id="playback-speed"
+                       type="range"
+                       min="{{ vm.playbackSpeed.min }}"
+                       max="{{ vm.playbackSpeed.max }}"
+                       step="{{ vm.playbackSpeed.step }}"
+                       ng-model="vm.playbackSpeed.value"
+                       data-title="{{ ((vm.playbackSpeed.value/vm.playbackSpeed.max)*100).toFixed(0) }}%"
+                       data-placement="bottom"
+                       bs-tooltip>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="playback-imageQuality">Quality</label>
+            </div>
+            <div class="col-xs-10">
+                <input id="playback-imageQuality"
+                       type="range"
+                       min="{{ vm.imageQualityPercentage.min }}"
+                       max="{{ vm.imageQualityPercentage.max }}"
+                       step="{{ vm.imageQualityPercentage.step }}"
+                       ng-model="vm.imageQualityPercentage.value"
+                       data-title="{{ ((vm.imageQualityPercentage.value/vm.imageQualityPercentage.max)*100).toFixed(0) }}%"
+                       data-placement="bottom"
+                       bs-tooltip>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="playback-gaps">
+                    Gaps
+                </label>
+            </div>
+            <div class="col-xs-10">
+                <toggle-switch class="switch-success"
+                               id="playback-gaps"
+                               ng-model="vm.playbackWithGaps">
+                </toggle-switch>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<script type="text/ng-template" id="correlationAnalysisModal.html">
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" ng-click="$hide()">&times;</button>
+                    <h4 class="modal-title">Correlation Analysis</h4>
+                    <span>{{ vm.correlation.latlng.lat }}, {{ vm.correlation.latlng.lng }}</span>
+
+                </div>
+                <div class="modal-body text-center">
+                    <div id="analysisImage"></div>
+                </div>
+                <div class="modal-footer">
+                    <a ng-href="{{ vm.geotiffLink }}" download="{{ vm.geotiffFilename }}" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
+                    <button class="btn btn-primary" ng-click="$hide()"><i class="fa fa-close"></i> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
