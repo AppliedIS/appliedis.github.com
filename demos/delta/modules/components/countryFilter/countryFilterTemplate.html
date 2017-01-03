@@ -1,0 +1,27 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="country-filter-container" ng-if="vm.deltaConfig.components.countryFilter">
+    <md-toolbar class="md-hue-2" ng-click="vm.toggleExpanded()">
+        <div class="md-toolbar-tools">
+            <h4>
+                <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                Countries
+            </h4>
+        </div>
+    </md-toolbar>
+    <md-list class="country-filter" ng-show="vm.expanded">
+        <div class="loading-countries" ng-show="vm.loadingCountries">
+            <md-progress-linear class="md-accent" md-mode="indeterminate"></md-progress-linear>
+        </div>
+        <div layout="row" layout-align="space-between center" ng-show="!vm.loadingCountries">
+            <md-select flex multiple="true" ng-model="vm.selectedCountries" ng-model-options="{ trackBy: '$value.genc_2' }" class="md-no-underline" aria-label="Country">
+                <md-option ng-repeat="country in vm.countries track by $index" ng-value="country">{{ country.country }}</md-option>
+            </md-select>
+            <md-button class="md-raised md-primary" ng-click="vm.filterByCountries()">Apply</md-button>
+        </div>
+    </md-list>
+</div>

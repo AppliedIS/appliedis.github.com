@@ -4,9 +4,11 @@
  See COPYRIGHT.txt for licensing information
  ******************************************************************************-->
 
-<div ng-controller="mapController as vm" class="map-container" style="height: {{ vm.mapHeight }}px">
+<div ng-controller="mapController as vm" class="map-container" ng-style="{ height: vm.mapHeight }">
     <leaflet lf-center="vm.center" width="100%" height="{{ vm.mapHeight }}" defaults="vm.defaults" layers="vm.layers"></leaflet>
-    <div class="loading" ng-if="vm.loading" style="height: {{ vm.mapHeight }}px">
-        <md-progress-circular class="md-accent"></md-progress-circular>
+    <div class="loading" ng-if="vm.loading" ng-style="{ height: vm.mapHeight }">
+        <div class="progress">
+            <md-progress-linear md-mode="indeterminate" class="md-accent"></md-progress-linear>
+        </div>
     </div>
 </div>

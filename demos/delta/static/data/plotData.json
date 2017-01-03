@@ -112,8 +112,12 @@
     },
     "objects": ["UTYP"],
     "sensors": [
-        "Sensor 1",
-        "Sensor 2"
+        "A0B1 1gb",
+        "A2B4 100gb",
+        "C2D3 1gb",
+        "C2D3 100gb",
+        "C4D5 10gb",
+        "E4F5 100gb"
     ],
     "scale_options": ["linear","log"],
     "points": [

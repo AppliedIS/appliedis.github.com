@@ -11,7 +11,7 @@
                 <h2 md-colors="{ color: 'grey-800' }">No events found. Try changing your search parameters.</h2>
             </div>
         </div>
-        <md-virtual-repeat-container class="table-responsive-vertical" md-top-index="vm.topIndex" style="height: {{ vm.eventsHeight }}px" ng-show="vm.mapEvents.length > 0">
+        <md-virtual-repeat-container class="table-responsive-vertical" md-top-index="vm.topIndex" ng-style="{ height: vm.eventsHeight }" ng-show="vm.mapEvents.length > 0">
             <table id="table" class="table table-condensed table-hover">
                 <thead>
                 <tr>

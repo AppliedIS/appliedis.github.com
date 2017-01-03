@@ -1,0 +1,24 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="confidence-filter-container" ng-if="vm.deltaConfig.components.confidenceFilter">
+    <md-toolbar class="md-hue-2" ng-click="vm.toggleExpanded()">
+        <div class="md-toolbar-tools">
+            <h4>
+                <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                Confidence
+            </h4>
+        </div>
+    </md-toolbar>
+    <md-list class="confidence-filter" ng-show="vm.expanded">
+        <md-slider-container>
+            <md-slider flex min="0" max="{{ vm.deltaConfig.maxConfidence }}" round="6" step="1" ng-model="vm.confidence" aria-label="Confidence" id="confidence-slider"></md-slider>
+            <md-input-container>
+                <input flex type="number" step="1" ng-model="vm.confidence" aria-label="Confidence" aria-controls="confidence-slider">
+            </md-input-container>
+        </md-slider-container>
+    </md-list>
+</div>

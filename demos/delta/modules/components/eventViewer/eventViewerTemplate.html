@@ -5,7 +5,7 @@
  ******************************************************************************-->
 
 <div ng-controller="eventViewerController as vm">
-    <md-content class="event-viewer-container" style="height: {{ vm.eventViewerHeight }}px">
+    <md-content class="event-viewer-container" ng-style="{ height: vm.eventViewerHeight }">
         <div class="absolute-center" ng-if="!vm.eventData">
             <h2 md-colors="{ color: 'grey-800' }">Select an event to view details</h2>
         </div>
@@ -19,24 +19,27 @@
                 <md-tooltip md-direction="left">Close Event</md-tooltip>
             </md-button>
             <div layout="column">
-                <div flex="40">
-                    <div class="loading" ng-if="vm.loadingChart" style="height: {{ vm.eventViewerHeight }}px">
-                        <md-progress-circular class="md-accent"></md-progress-circular>
+                <div class="event-chart" flex="40" ng-style="{ 'min-height': vm.eventViewerHeight/2 }" class="margin-bottom-lg">
+                    <div class="loading" ng-if="vm.loading" ng-style="{ height: vm.eventViewerHeight }">
+                        <div class="progress">
+                            <md-progress-linear md-mode="indeterminate" class="md-accent"></md-progress-linear>
+                            <h3>{{ vm.loadingStatus }}</h3>
+                        </div>
                     </div>
-                    <div id="chart" class="margin-bottom-lg" style="min-height: {{ vm.eventViewerHeight/2 }}px"></div>
+                    <div id="chart"></div>
                 </div>
-                <div class="event-vote" flex="10" ng-show="!vm.loadingChart">
-                    <div class="controls-container" layout="row" layout-align="center center">
+                <div class="event-controls" flex="10" ng-show="!vm.loading">
+                    <div layout="row" layout-align="center center">
                         <div class="playback-controls">
-                            <md-button class="md-raised md-icon-button" ng-click="vm.step('backward')" md-colors="{ background: vm.playbackDirection === 'backward' ? 'blue-800' : 'blue-grey-50' }" aria-label="Step Backward">
+                            <md-button class="md-raised md-icon-button" ng-click="vm.setPlaybackDirection('backward')" md-colors="{ background: vm.playbackDirection === 'backward' ? 'blue-800' : 'blue-grey-50' }" aria-label="Rewind">
                                 <i class="fa fa-step-backward"></i>
                                 <md-tooltip>Reverse / Step Back</md-tooltip>
                             </md-button>
-                            <md-button class="md-raised md-icon-button" ng-click="vm.togglePlayback()" aria-label="Play/Pause">
-                                <i class="fa" ng-class="{ 'fa-pause': vm.playback === true, 'fa-play': vm.playback === false }"></i>
-                                <md-tooltip><span ng-if="vm.playback === true">Pause</span><span ng-if="vm.playback === false">Play</span></md-tooltip>
+                            <md-button class="md-raised md-icon-button" ng-click="vm.setPlaybackState(!vm.playbackState)" aria-label="Play/Pause">
+                                <i class="fa" ng-class="{ 'fa-pause': vm.playbackState === true, 'fa-play': vm.playbackState === false }"></i>
+                                <md-tooltip><span ng-if="vm.playbackState === true">Pause</span><span ng-if="vm.playbackState === false">Play</span></md-tooltip>
                             </md-button>
-                            <md-button class="md-raised md-icon-button" ng-click="vm.step('forward')" md-colors="{ background: vm.playbackDirection === 'forward' ? 'blue-800' : 'blue-grey-50' }" aria-label="Step Forward">
+                            <md-button class="md-raised md-icon-button" ng-click="vm.setPlaybackDirection('forward')" md-colors="{ background: vm.playbackDirection === 'forward' ? 'blue-800' : 'blue-grey-50' }" aria-label="Forward">
                                 <i class="fa fa-step-forward"></i>
                                 <md-tooltip>Forward / Step</md-tooltip>
                             </md-button>
@@ -60,75 +63,75 @@
                         </div>
                     </div>
                 </div>
-                <div flex="5" ng-show="!vm.loadingChart">
-                    <div layout="row" class="event-card-select-container">
+                <div class="event-card-select" flex="5" ng-show="!vm.loading">
+                    <div layout="row">
                         <div flex>
-                            <div class="event-card-select" layout="row" layout-align="start center">
-                                <md-select ng-model="vm.selectedImageCard" ng-change="vm.setActiveImageCard()" class="md-no-underline" aria-label="Event Image">
-                                    <md-option ng-repeat="card in vm.availableImageCards" ng-value="card">{{ card.sensor }}</md-option>
+                            <div layout="row" layout-align="start center">
+                                <md-select ng-model="vm.activeChipCard" ng-change="vm.setActiveChipCard()" ng-model-options="{ trackBy: '$value.sensor' }" class="md-no-underline" aria-label="Event Image">
+                                    <md-option ng-repeat="card in vm.availableChipCards" ng-value="card">{{ card.sensor }}</md-option>
                                 </md-select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div flex="45" ng-show="!vm.loadingChart">
-                    <div class="event-animations">
-                        <div class="card" ng-repeat="card in vm.eventImageCards" ng-show="card.active">
-                            <h4>
-                                <span class="card-color" ng-if="card.color"><i class="fa fa-stop" ng-style="{ color: card.color }"></i></span>
-                                <span ng-if="vm.trackFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.internalSource.color }">{{vm.internalSource.title}}</span>
-                                <span ng-if="!vm.trackFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.externalSource.color }">{{vm.externalSource.title}}</span>
-                                <md-button aria-label="Download Event H5">
-                                  <a class="link-button" ng-show="vm.event_h5_url" href="{{ vm.event_h5_url }}"><i class="fa fa-download"></i></a>
-                                  <md-tooltip md-direction="top">Download H5</md-tooltip>
-                                </md-button>
-                                <md-button aria-label="View Event Metadata" ng-show="vm.eventProps" ng-click="vm.showMetadata($event, vm.eventProps)">
-                                  <i class="fa fa-info"></i>
-                                  <md-tooltip md-direction="top">View Metadata</md-tooltip>
-                                </md-button>
-                                <md-button aria-label="Match Signature" ng-click="vm.matchSignature(card.sensor)">
-                                    <i class="fa fa-line-chart"></i>
-                                    <md-tooltip md-direction="top">Match Signature</md-tooltip>
-                                </md-button>
-                            </h4>
-                            <md-card>
-                                <md-card-content>
-                                    <div class="loading" ng-if="vm.loadingAnimation">
-                                        <md-progress-circular class="md-accent"></md-progress-circular>
-                                    </div>
-                                    <canvas ng-class="card.class"></canvas>
-                                    <p>{{ card.sensor }}</p>
-                                </md-card-content>
-                            </md-card>
-                        </div>
-                        <div class="correlating-card" ng-repeat="card in vm.correlatingEventImageCards" ng-show="card.active">
-                            <h4>
-                                <span class="card-color" ng-if="card.color"><i class="fa fa-stop" ng-style="{ color: card.color }"></i></span>
-                                <span ng-if="vm.trackFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.externalSource.color }">{{vm.externalSource.title}}</span>
-                                <span ng-if="!vm.trackFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.internalSource.color }">{{vm.internalSource.title}}</span>
-                                <md-button aria-label="Download Correlated H5">
-                                  <a class="link-button" ng-show="vm.correlated_h5_url" href="{{ vm.correlated_h5_url }}"><i class="fa fa-download"></i></a>
-                                  <md-tooltip md-direction="top">Download H5</md-tooltip>
-                                </md-button>
-                                <md-button aria-label="View Event Metadata" ng-show="vm.correlatedEventProps" ng-click="vm.showMetadata($event, vm.correlatedEventProps)">
-                                  <i class="fa fa-info"></i>
-                                  <md-tooltip md-direction="top" ng-click="vm.showEventMetadata()">View Metadata</md-tooltip>
-                                </md-button>
-                                <md-button aria-label="Match Signature" ng-click="vm.matchSignature(card.sensor)">
-                                    <i class="fa fa-line-chart"></i>
-                                    <md-tooltip md-direction="top">Match Signature</md-tooltip>
-                                </md-button>
-                            </h4>
-                            <md-card>
-                                <md-card-content>
-                                    <div class="loading" ng-if="vm.loadingAnimation">
-                                        <md-progress-circular class="md-accent"></md-progress-circular>
-                                    </div>
-                                    <canvas ng-class="card.class"></canvas>
-                                    <p>{{ card.sensor }}</p>
-                                </md-card-content>
-                            </md-card>
-                        </div>
+                <div class="event-animations" flex="45" ng-show="!vm.loading">
+                    <div class="card" ng-repeat="card in vm.chipCards" ng-show="card.active">
+                        <h4>
+                            <span ng-if="vm.selectedFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.internalSource.color }">{{vm.internalSource.title}}</span>
+                            <span ng-if="!vm.selectedFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.externalSource.color }">{{vm.externalSource.title}}</span>
+                            <md-button aria-label="Download Event H5">
+                                <a class="link-button" ng-show="vm.h5Url" href="{{ vm.h5Url }}"><i class="fa fa-download"></i></a>
+                                <md-tooltip md-direction="top">Download H5</md-tooltip>
+                            </md-button>
+                            <md-button aria-label="View Event Metadata" ng-show="vm.eventProps" ng-click="vm.showMetadata($event, vm.eventProps)">
+                                <i class="fa fa-info"></i>
+                                <md-tooltip md-direction="top">View Metadata</md-tooltip>
+                            </md-button>
+                            <!--<md-button aria-label="Match Signature" ng-click="vm.matchSignature(card.sensor)">-->
+                                <!--<i class="fa fa-line-chart"></i>-->
+                                <!--<md-tooltip md-direction="top">Match Signature</md-tooltip>-->
+                            <!--</md-button>-->
+                        </h4>
+                        <md-card>
+                            <md-card-content>
+                                <canvas ng-class="card.class"></canvas>
+                                <p>{{ card.chartId }}</p>
+                                <ul class="event-info">
+                                    <li><span class="field">Confidence:</span> <span class="data">{{ vm.eventProps[0][vm.deltaConfig.server.confidenceField] }}</span></li>
+                                    <li><span class="field">File:</span> <span class="data">{{ vm._.last(vm.eventProps[0].file_path.split('/')) }}</span></li>
+                                    <li><span class="field">Type:</span> <span class="data">{{ vm.eventProps[0][vm.deltaConfig.server.typeField] }}</span></li>
+                                </ul>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+                    <div class="correlating-card" ng-repeat="card in vm.correlatingChipCards" ng-show="card.active">
+                        <h4>
+                            <span ng-if="vm.selectedFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.externalSource.color }">{{vm.externalSource.title}}</span>
+                            <span ng-if="!vm.selectedFeature.properties[vm.deltaConfig.server.identityField]" ng-style="{ color: card.color ? card.color : vm.internalSource.color }">{{vm.internalSource.title}}</span>
+                            <md-button aria-label="Download Correlated H5">
+                                <a class="link-button" ng-show="vm.correlatedH5Url" href="{{ vm.correlatedH5Url }}"><i class="fa fa-download"></i></a>
+                                <md-tooltip md-direction="top">Download H5</md-tooltip>
+                            </md-button>
+                            <md-button aria-label="View Event Metadata" ng-show="vm.correlatedEventProps" ng-click="vm.showMetadata($event, vm.correlatedEventProps)">
+                                <i class="fa fa-info"></i>
+                                <md-tooltip md-direction="top">View Metadata</md-tooltip>
+                            </md-button>
+                            <!--<md-button aria-label="Match Signature" ng-click="vm.matchSignature(card.sensor)">-->
+                                <!--<i class="fa fa-line-chart"></i>-->
+                                <!--<md-tooltip md-direction="top">Match Signature</md-tooltip>-->
+                            <!--</md-button>-->
+                        </h4>
+                        <md-card>
+                            <md-card-content>
+                                <canvas ng-class="card.class"></canvas>
+                                <p>{{ card.chartId }}</p>
+                                <ul class="event-info">
+                                    <li><span class="field">Confidence:</span> <span class="data">{{ vm.correlatedEventProps[0][vm.deltaConfig.server.confidenceField] }}</span></li>
+                                    <li><span class="field">File:</span> <span class="data">{{ vm._.last(vm.correlatedEventProps[0].file_path.split('/')) }}</span></li>
+                                    <li><span class="field">Type:</span> <span class="data">{{ vm.correlatedEventProps[0][vm.deltaConfig.server.typeField] }}</span></li>
+                                </ul>
+                            </md-card-content>
+                        </md-card>
                     </div>
                 </div>
             </div>

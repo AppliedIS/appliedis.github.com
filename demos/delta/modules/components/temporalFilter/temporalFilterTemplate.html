@@ -10,29 +10,12 @@
         <div class="md-toolbar-tools">
             <h4>
                 <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span> Date/Time
-                <span class="temporal-label" md-colors="{ color: 'amber-600' }">({{ vm.moment.utc(vm.start).format('YYYY-MM-DD') }} &ndash; {{ vm.moment.utc(vm.stop).format('YYYY-MM-DD') }})</span>
             </h4>
             <span flex></span>
-            <md-button class="md-icon-button" aria-label="Step Backward" ng-click="vm.stepBackward($event)">
-                <i class="fa fa-caret-left"></i>
-                <md-tooltip md-direction="top">Step Backward</md-tooltip>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Step Forward" ng-click="vm.stepForward($event)">
-                <i class="fa fa-caret-right"></i>
-                <md-tooltip md-direction="top">Step Forward</md-tooltip>
-            </md-button>
         </div>
     </md-toolbar>
     <div class="temporal-filter" ng-show="vm.expanded">
-        <md-toolbar ng-click="vm.toggleExpandedFilter()">
-            <div class="md-toolbar-tools">
-                <h5>
-                    <span class="fa" ng-class="vm.expandedRange ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
-                    Range
-                </h5>
-            </div>
-        </md-toolbar>
-        <div class="range-filter" ng-show="vm.expandedRange">
+        <div class="range-filter">
             <h5 ng-class="{error: vm.invalid}">Start Date</h5>
             <div layout="row" layout-xs="column">
                 <div flex>
@@ -46,39 +29,14 @@
             <div layout="row" layout-xs="column">
                 <div flex>
                     <mdp-date-picker name="endDate" mdp-use-utc="true" mdp-placeholder="Date" ng-model="vm.stop" ng-model-options="{ debounce: { default: 500, blur: 0 } }"></mdp-date-picker>
-
                 </div>
                 <div flex>
                     <mdp-time-picker name="endTime" mdp-use-utc="true" mdp-placeholder="Time" ng-model="vm.stop" ng-model-options="{ debounce: { default: 500, blur: 0 } }"></mdp-time-picker>
-
                 </div>
             </div>
             <div layout="row" layout-xs="column" layout-align="center center">
-                <md-button ng-repeat="range in vm.ranges" ng-click="vm.setRange(range.units, range.unitOfTime)">{{ range.label }}</md-button>
-            </div>
-        </div>
-        <md-toolbar ng-click="vm.toggleExpandedFilter()">
-            <div class="md-toolbar-tools">
-                <h5>
-                    <span class="fa" ng-class="vm.expandedDuration ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
-                    Duration
-                </h5>
-            </div>
-        </md-toolbar>
-        <div class="duration-filter" ng-show="vm.expandedDuration">
-            <div layout="row" layout-xs="column">
-                <div flex="20">
-                    <md-input-container class="md-block">
-                        <label>Length</label>
-                        <input type="text" ng-model="vm.durationLength" ng-change="vm.setTemporalFilter()">
-                    </md-input-container>
-                </div>
-                <div flex="80">
-                    <md-select ng-model="vm.selectedDuration" ng-change="vm.setTemporalFilter()" placeholder="Ranges">
-                        <md-option ng-repeat="duration in vm.durations" ng-value="duration">{{ duration.label }}</md-option>
-                    </md-select>
-                </div>
-            </div>
+               <md-button ng-repeat="range in vm.ranges" ng-click="vm.setRange(range.units, range.unitOfTime)">Last <br /> {{ range.label }}</md-button>
+           </div>
         </div>
     </div>
 </div>

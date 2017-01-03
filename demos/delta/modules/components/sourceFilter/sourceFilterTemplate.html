@@ -22,7 +22,7 @@
         </md-list-item>
     </md-list>
     <h5>Source Type</h5>
-    <md-select ng-model="vm.sourceType" ng-change="vm.setSourceType()" placeholder="Source Type">
+    <md-select ng-model="vm.sourceType" ng-change="vm.setSourceType()" md-model-options="{ trackBy: '$value.name' }" placeholder="Source Type">
         <md-option ng-repeat="type in vm.sourceTypes" ng-value="type">{{ type.name }} <i class="fa" ng-class="type.icon"></i></md-option>
     </md-select>
 </div>
