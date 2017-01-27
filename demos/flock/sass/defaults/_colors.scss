@@ -1,0 +1,70 @@
+
+// Color Theme from: Allison someplace?
+$theme0-dark: #04142a;
+$theme0-dark-lighter: #09274b;
+$theme0-blue-light: #DAE9F6;
+$theme0-blue-medium: #0b2d5b;
+$theme0-blue-light2: #A5D2E8;
+$theme0-purple: #84469f;
+$theme0-purple-light: #caa7d9;
+$theme0-gray-dark: #333333;
+$theme0-gray-medium: #cccccc;
+$theme0-gray-light: #e8e8e8;
+$theme0-orange: #e68d35;
+$theme0-green: #09aa64;
+$theme0-green-dark: #045130;
+$theme0-blue: #068894;
+$theme0-blue-dark: #05626b;
+
+// Color Theme from: https://dribbble.com/shots/517375-Homepage-Design-UI-design
+$theme1-dark: #29292a;
+$theme1-gray-dark: #5c5c5c;
+$theme1-gray-medium: #9b9b9b;
+$theme1-gray-light: #e8e8e8;
+$theme1-orange: #e68d35;
+$theme1-green: #09aa64;
+$theme1-green-dark: #3c493a;
+$theme1-blue: #068894;
+
+// https://dribbble.com/shots/1646335-Inventory-Stats-WIP
+$theme2-dark: #252933;
+$theme2-gray-dark: #5b5552;
+$theme2-gray-light: #9d9992;
+$theme2-blue: #2AA9C9;
+$theme2-blue-dark: #197890;
+$theme2-green: #9bbd49;
+
+//theme 3
+$theme3-dark: #313d4c;
+$theme3-gray-dark: #262d37;
+$theme3-gray-light: #bcc4cc;
+$theme3-blue: #b3d1fd;
+$theme3-blue-medium: #3075a6;
+$theme3-blue-dark: #0b3b84;
+$theme3-orange: #c6704b;
+$theme3-green: #70ad25;
+
+
+// Prefix all colors for use outside of this file with $clr and with a generic
+// name so we can switch the theme out easily.
+$clr-black: #000000;
+$clr-white: #ffffff;
+$clr-gray-dark: $theme0-gray-dark;
+$clr-gray-medium: $theme0-gray-medium;
+$clr-gray-light: $theme0-gray-light;
+$clr-orange: $theme0-orange;
+$clr-green: $theme0-green;
+$clr-blue: $theme0-blue;
+
+$clr-dark: $theme0-dark;
+
+$clr-background: $theme3-gray-dark;
+$clr-background-alt: $theme3-dark;
+$clr-txt: $theme0-gray-light;
+$clr-highlight: $theme3-orange;
+$clr-selection: $theme3-green;
+
+$clr-links-out: $theme3-blue;
+$clr-links-hover: lighten($clr-links-out, 10%);
+$clr-links_alt-out: $theme3-blue-dark;
+$clr-links_alt-hover: lighten($clr-links_alt-out, 10%);

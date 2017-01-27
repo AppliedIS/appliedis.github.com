@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: 'raleway';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light-webfont.woff') format('woff'),
+         url('../fonts/raleway-light-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
+
+}
+
+@font-face {
+    font-family: 'raleway';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+}
+
+/*
+// We'll have to fix this if we want to use open sans... need to download it and
+// host local
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans');
+$font-stack-body: 'Open Sans', serif;
+*/
+
+$font-stack-headline: 'raleway', sans-serif !default;
+$font-stack-body: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+html,
+body {
+    font-family: $font-stack-body;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-stack-headline;
+    font-weight: normal;
+    margin: 1.1em 0 0.6em;
+}
+
+.navigation {
+    font-family: $font-stack-headline;
+}

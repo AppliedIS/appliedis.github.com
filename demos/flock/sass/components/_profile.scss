@@ -1,0 +1,42 @@
+$profile-map-height: 550px;
+
+.profile-container {
+    margin-left: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 1em 0 0;
+
+    & > div {
+        flex-grow: 1;
+        margin: 0 0 2em 2em;
+    }
+}
+
+.profile-map-container {
+    height: $profile-map-height;
+    //margin: 40px 5% 0;
+    //max-width: 600px;
+    width: 100%;
+}
+
+.profile-signatures-container {
+    //margin-left: 2em;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.signature-list-container {
+    max-height: $profile-map-height;
+    overflow: auto;
+}

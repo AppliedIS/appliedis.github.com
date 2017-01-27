@@ -1,0 +1,26 @@
+
+body,
+html {
+    background: $clr-background;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: $clr-txt;
+}
+
+a {
+    color: $clr-links-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $clr-links-hover;
+    }
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid $clr-gray-dark;
+    height: 0;
+}

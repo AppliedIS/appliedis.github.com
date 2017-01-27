@@ -1,0 +1,16 @@
+
+.about__logos {
+    @include outer-container(100%);
+}
+
+.about__logo {
+    fill: $clr-white;
+    height: 64px;
+    margin: 1.0em 1.5em;
+    width: 64px;
+}
+
+.about__logo-img {
+    height: 64px;
+    margin: 1.0em 1.5em;
+}

@@ -1,0 +1,33 @@
+.timeline {
+    display: block;
+
+    .timeline-background {
+        fill: rgba($clr-background, 0.75);
+    }
+
+    .timeline-axis path, .timeline-axis line {
+        stroke: $clr-gray-light;
+        stroke-width: 1.5px;
+    }
+
+    .timeline-axis text {
+        fill: $clr-gray-light;
+        font-size: 12px;
+        pointer-events: none;
+        stroke: none;
+    }
+
+    .timeline-markers path.timline-datapath {
+        fill: none;
+        pointer-events: none;
+        stroke: $clr-gray-medium;
+        stroke-width: 1.5px;
+    }
+
+    .timeline-indicator {
+        fill: none;
+        pointer-events: none;
+        stroke: $clr-highlight;
+        stroke-width: 1.5px;
+    }
+}

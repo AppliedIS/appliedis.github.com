@@ -1,0 +1,24 @@
+
+.filterbox {
+    align-content: center;
+    align-items: stretch;
+    background-color: $clr-background-alt;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2.0em;
+    padding: 1.0em;
+
+    .filterbox__input {
+        flex: 1;
+        max-width: 768px;
+    }
+
+    .filterbox__button {
+        padding: 0.5em;
+        width: 300px;
+    }
+
+    .filterbox__info {
+    }
+}

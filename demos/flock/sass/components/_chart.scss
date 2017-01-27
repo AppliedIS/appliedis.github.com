@@ -1,0 +1,55 @@
+
+.chart {
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+.chart__axis {
+}
+
+.chart__band {
+    fill: $clr-dark;
+    fill-opacity: 0.25;
+    stroke: none;
+}
+
+.chart__line {
+}
+
+.chart__overlay {
+
+    rect {
+        // make it transparent so that it gets mouse events but you can
+        // still see through it.
+        fill: $clr-black;
+        fill-opacity: 0;
+    }
+}
+
+.chart__line-signature {
+    fill: none;
+    stroke: $clr-highlight;
+    stroke-width: 1.75px;
+
+    &.chart__line-selected {
+        stroke: $clr-selection;
+    }
+}
+
+.chart__spinner {
+    text-align: center;
+    width: 100%;
+}
+
+.chart__tooltip {
+
+    rect {
+        fill: #0f0;
+        stroke: #f00;
+        stroke-width: 1px;
+    }
+
+    text {
+        fill: $clr-white;
+    }
+}

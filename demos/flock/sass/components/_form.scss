@@ -1,0 +1,74 @@
+
+// Form Styling.
+// Hat tip to nrrrdcore's gist on styling inputs:
+//
+// https://gist.github.com/nrrrdcore/3309046
+// https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+//
+$forms-border-radius: 3px; //0.20em;
+$forms-transition: all 0.27s ease-in-out;
+$forms-bg-out: $theme3-gray-light;
+$forms-bg-focus: lighten($clr-background-alt, 3%);
+$forms-border-out: darken($clr-highlight, 10%);
+$forms-border-over: lighten($clr-highlight, 10%);
+$forms-border-focus: $clr-highlight;
+$forms-txt-color: $clr-white;
+
+// -- Form Inputs
+#{$all-text-inputs},
+select {
+    appearance: none;
+    background: $forms-bg-out;
+    border: 1px solid $forms-border-out;
+    border-radius: $forms-border-radius;
+    box-shadow: inset 0 1px 3px rgba($clr-black, 0.5), 1px 1px 0 $clr-dark;
+    color: $forms-txt-color;
+    display: block;
+    font-weight: normal;
+    margin: 0.75em 0;
+    outline: none;
+    padding: 0.35em 0.5em;
+    transition: $forms-transition;
+    width: 100%;
+}
+
+#{$all-text-inputs-hover} {
+    background: $forms-bg-out;
+    border: 1px solid $forms-border-over;
+    box-shadow: 0 0 7px rgba($clr-black, 0.25);
+    color: $forms-txt-color;
+}
+
+#{$all-text-inputs-focus} {
+    background: $forms-bg-focus;
+    border: 1px solid $forms-border-focus;
+    box-shadow: 0 0 7px rgba($clr-black, 0.7);
+    color: $forms-txt-color;
+}
+
+
+// -- Buttons
+#{$all-buttons} {
+    appearance: none;
+    background-color: $forms-border-out;
+    border: 1px solid $clr-highlight;
+    border-radius: $forms-border-radius;
+    color: $clr-txt;
+    cursor: pointer;
+    display: block;
+    font-size: modular-scale(1);
+    letter-spacing: 0.04em;
+    outline: none;
+    padding: 0.25em 0.5em;
+    text-rendering: optimizeLegibility;
+    transition: $forms-transition;
+}
+
+#{$all-buttons-focus},
+#{$all-buttons-hover} {
+    background-color: $forms-border-focus;
+    border: 1px solid $forms-border-over;
+    box-shadow: 0 0 7px rgba($clr-black, 0.27);
+    color: $clr-white;
+    text-shadow: 1px 1px 0 $clr-dark;
+}
