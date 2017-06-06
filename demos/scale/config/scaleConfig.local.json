@@ -1,0 +1,24 @@
+{
+    "scaleConfigLocal": {
+        "urls": {
+            "apiPrefix": "http://scale.dcos.aisohio.net/api/v5/",
+            "overrides": {
+                "status": "http://scale.dcos.aisohio.net/api/v4/"
+            },
+            "documentation": "http://scale.dcos.aisohio.net/docs"
+        },
+        "pollIntervals": {
+            "runningJobs": 1000,
+            "jobs": 1000,
+            "jobTypes": 300000,
+            "jobExecutionLog": 1000,
+            "jobTypeStatus": 5000,
+            "nodes": 300000,
+            "nodeStatus": 5000,
+            "queueStatus": 300000,
+            "queueDepth": 300000,
+            "status": 300000,
+            "jobLoad": 300000
+        }
+    }
+}

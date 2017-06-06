@@ -1,16 +1,21 @@
 <ais-header name="'Job Types (' + vm.jobTypeCount + ')'" show-subnav="true" subnav-links="vm.subnavLinks" loading="vm.loading"></ais-header>
-
 <div class="row">
     <div class="col-xs-3 master-container" style="{{ vm.containerStyle }}">
         <div class="master-content">
+            <div class="master-controls">
+                <div class="pull-right">
+                    <!--<switch id="show-rd" name="show-rd" ng-model="vm.jobTypesParams.show_rd" class="green"></switch> <span class="switch-label ">Show R&D</span>-->
+                    <toggle-switch ng-model="vm.jobTypesParams.show_rd" on-label="R&D" off-label="Prod" class="switch-success switch-small pull-right"></toggle-switch>
+                </div>
+            </div>
             <ul class="list-unstyled">
-                <li ng-repeat="jobType in vm.jobTypes" ng-class="{ active: vm.activeJobType.id === jobType.id }" ng-click="vm.viewDetails(jobType.id)">
+                <li ng-repeat="jobType in vm.jobTypes" ng-class="{ active: vm.activeJobType.id === jobType.id }" ng-show="jobType.is_operational || vm.jobTypesParams.show_rd" ng-click="vm.viewDetails(jobType.id)">
                     <span ng-bind-html="jobType.getIcon()"></span> {{ jobType.title + ' ' + jobType.version }} <span class="label paused" ng-show="jobType.is_paused">PAUSED</span>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="col-xs-9 detail-container" style="{{ vm.containerStyle }}">
+    <div class="col-xs-9 detail-container">
         <h2 ng-if="!vm.activeJobType" class="text-center">Select a job type to view its performance and other details.</h2>
         <div class="detail-content" ng-class="vm.jobDetailsClass">
             <ul class="nav nav-tabs" role="tablist">
@@ -48,11 +53,13 @@
                                 <dd ng-if="vm.activeJobTypeDetails.last_modified">{{ vm.activeJobTypeDetails.last_modified }}</dd>
                                 <dt ng-if="vm.activeJobTypeDetails.archived">Archived:</dt>
                                 <dd ng-if="vm.activeJobTypeDetails.archived">{{ vm.activeJobTypeDetails.archived }}</dd>
-                                <dt ng-if="vm.activeJobTypeDetails.cpus_required">CPUs Required:</dt>
+                                <dt ng-if="vm.activeJobTypeDetails.cpus_required">CPUs:</dt>
                                 <dd ng-if="vm.activeJobTypeDetails.cpus_required">{{ vm.activeJobTypeDetails.cpus_required }}</dd>
-                                <dt ng-if="vm.activeJobTypeDetails.mem_required">Memory Required:</dt>
-                                <dd ng-if="vm.activeJobTypeDetails.mem_required">{{ vm.activeJobTypeDetails.mem_required }}</dd>
-                                <dt ng-if="vm.activeJobTypeDetails.disk_out_const_required_formatted">Disk Required:</dt>
+                                <dt ng-if="vm.activeJobTypeDetails.mem_required">Memory:</dt>
+                                <dd ng-if="vm.activeJobTypeDetails.mem_required">{{ vm.activeJobTypeDetails.mem_required_formatted }}</dd>
+                                <dt ng-if="vm.activeJobTypeDetails.mem_required">Shared Memory:</dt>
+                                <dd ng-if="vm.activeJobTypeDetails.mem_required">{{ vm.activeJobTypeDetails.shared_mem_required_formatted }}</dd>
+                                <dt ng-if="vm.activeJobTypeDetails.disk_out_const_required_formatted">Disk:</dt>
                                 <dd ng-if="vm.activeJobTypeDetails.disk_out_const_required_formatted">{{ vm.activeJobTypeDetails.disk_out_const_required_formatted }}</dd>
                                 <dt ng-if="vm.activeJobTypeDetails.disk_out_mult_required">Input Size Multiplier:</dt>
                                 <dd ng-if="vm.activeJobTypeDetails.disk_out_mult_required">{{ vm.activeJobTypeDetails.disk_out_mult_required }}</dd>

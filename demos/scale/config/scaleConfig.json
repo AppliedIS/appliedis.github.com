@@ -1,6 +1,5 @@
 {
     "scaleConfig": {
-        "majorVersion": 3,
         "colors": {
             "emo_1": "#556270",
             "emo_2": "#4ecdc4",
@@ -149,6 +148,7 @@
 
         "jobStatus": ["VIEW ALL","COMPLETED","BLOCKED","QUEUED","RUNNING","FAILED","CANCELED","PENDING"],
         "ingestStatus": ["VIEW ALL","TRANSFERRING","TRANSFERRED","QUEUED","DEFERRED","INGESTING","INGESTED","ERRORED","DUPLICATE"],
+        "batchStatus": ["VIEW ALL","SUBMITTED","CREATED"],
         "workspaceTypes": [
             {
                 "broker": {
@@ -172,6 +172,7 @@
             }
         ],
         "strikeConfigurationVersion": "2.0",
+        "scanConfigurationVersion": "1.0",
         "nfsBrokerDescription": "The NFS broker mounts a remote network file system volume into the job’s container.",
         "hostBrokerDescription": "The host broker mounts a local directory from the host into the job’s container. This local directory should be a shared file system that has been mounted onto all hosts in the cluster. All hosts must have the same shared file system mounted at the same location for this broker to work properly.",
         "s3BrokerDescription": "The S3 broker mounts a remote Amazon S3 bucket or compatible object store.",
@@ -200,11 +201,11 @@
         "activityIconCode": "f110",
 
         "urls": {
-            "apiPrefix": "/api/",
+            "apiPrefix": "./api/v5/",
             "overrides": {
-                "ingests": "/api/"
+                "status": "./api/v4/"
             },
-            "documentation": "/docs"
+            "documentation": "./docs"
         },
 
         "defaultGaugeWidth": 160,
@@ -212,10 +213,10 @@
             "runningJobs": 300000,
             "jobs": 300000,
             "jobTypes": 300000,
-            "jobExecutionLog": 300000,
+            "jobExecutionLog": 1000,
             "jobTypeStatus": 300000,
             "nodes": 300000,
-            "nodeStatus": 300000,
+            "nodeStatus": 5000,
             "queueStatus": 300000,
             "queueDepth": 300000,
             "status": 300000,
@@ -240,11 +241,17 @@
             "feed": [
                 { "path": "feed", "label": "Status" },
                 { "path": "feed/ingests", "label": "Ingest Records" },
-                { "path": "feed/strikes", "label": "Strikes" }
+                { "path": "feed/strikes", "label": "Strikes" },
+                { "path": "feed/scans", "label": "Scans" }
+            ],
+            "batch": [
+                { "path": "batch", "label": "Batches" },
+                { "path": "batch/0", "label": "Create Batch" }
             ]
         },
         "headerOffset": 165,
         "dateFilterOffset": 45,
-        "paginationOffset": 35
+        "paginationOffset": 35,
+        "batchDefinitionVersion": "1.0"
     }
 }
