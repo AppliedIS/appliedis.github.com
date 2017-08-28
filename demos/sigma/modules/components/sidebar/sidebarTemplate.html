@@ -4,22 +4,22 @@
         <div class="text-center margin-top-lg margin-bottom-lg btn-container" data-title="{{ vm.disableAnalyzeBtn ? 'Draw an AOI begin analysis' : '' }}" data-placement="bottom" data-container="body" bs-tooltip>
             <button class="btn btn-success btn-block" ng-click="vm.analyze()" ng-disabled="vm.disableAnalyzeBtn">Analyze <i class="fa fa-caret-right"></i></button>
         </div>
+        <sigma-state expanded="true"></sigma-state>
         <sigma-goto expanded="false"></sigma-goto>
-        <sigma-temporal-filter expanded="true" mode="search"></sigma-temporal-filter>
-        <sigma-location-filter expanded="true" mode="search"></sigma-location-filter>
-        <sigma-coverage-filter expanded="true"></sigma-coverage-filter>
-        <sigma-band expanded="true" mode="search"></sigma-band>
-        <sigma-sensor expanded="true" mode="search"></sigma-sensor>
-        <sigma-recent-aoi-list expanded="true"></sigma-recent-aoi-list>
+        <sigma-temporal-filter expanded="false"></sigma-temporal-filter>
+        <sigma-location-filter expanded="false"></sigma-location-filter>
+        <sigma-coverage-filter expanded="false"></sigma-coverage-filter>
+        <sigma-band expanded="true"></sigma-band>
+        <sigma-sensor expanded="true"></sigma-sensor>
     </div>
     <div ng-if="vm.mode === 'analyze'">
         <div class="text-center margin-top-lg margin-bottom-lg">
             <button class="btn btn-success btn-block" ng-click="vm.viewMap()"><i class="fa fa-caret-left"></i> Search</button>
         </div>
-        <sigma-temporal-filter expanded="true" mode="analyze"></sigma-temporal-filter>
-        <sigma-location-filter expanded="true" mode="analyze"></sigma-location-filter>
-        <sigma-band expanded="true" mode="analyze"></sigma-band>
-        <sigma-sensor expanded="true" mode="analyze"></sigma-sensor>
+        <sigma-temporal-filter expanded="true"></sigma-temporal-filter>
+        <sigma-location-filter expanded="true"></sigma-location-filter>
+        <sigma-band expanded="true"></sigma-band>
+        <sigma-sensor expanded="true"></sigma-sensor>
         <sigma-frame-overlays expanded="true"></sigma-frame-overlays>
     </div>
 </div>

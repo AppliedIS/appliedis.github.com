@@ -6,7 +6,7 @@
         <div class="playback-control">
             <div class="playback-interval-control">
                 <div class="input-group input-group-sm">
-                    <input type="text" class="form-control" ng-model="vm.playbackIntervalQty" ng-change="vm.setIntervalQty()">
+                    <input type="text" class="form-control" ng-model="vm.playbackIntervalQty" ng-change="vm.setIntervalQty()" ng-disabled="vm.playbackInterval.value === null">
                     <div class="input-group-btn">
                         <div class="btn-group dropdown">
                             <button type="button" class="btn btn-default btn-sm" bs-dropdown data-animation="am-flip-x" aria-haspopup="true" aria-expanded="false">

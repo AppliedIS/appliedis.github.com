@@ -1,0 +1,35 @@
+<div class="aside right am-fade-and-slide-right" tabindex="-1" role="dialog">
+    <div class="aside-dialog">
+        <div class="aside-content">
+            <div class="aside-header">
+                <button type="button" class="close" ng-click="$hide()">×</button>
+                <h4 class="aside-title" ng-bind-html="title">AOI Analysis</h4>
+            </div>
+            <div class="aside-body">
+                <div class="form-group">
+                    <label for="analysis-type">Type</label>
+                    <select id="analysis-type" class="form-control" ng-model="vm.selectedAnalysis" ng-options="value as value.title for value in vm.aoiAnalysisValues"></select>
+                </div>
+                <div class="form-group">
+                    <label for="analysis-colormap">Colormap</label>
+                    <select id="analysis-colormap" class="form-control" ng-model="vm.selectedColormap" ng-options="value as value.title for value in vm.colormapValues"></select>
+                </div>
+                <div class="threshold-container" ng-if="vm.showThreshold">
+                    <h4>Threshold</h4>
+                    <div class="form-group">
+                        <label>Minimum</label>
+                        <input type="text" class="form-control" ng-model="vm.threshold.min" placeholder="Minimum" msd-wheel="vm.updateThresholdMin($event, $delta, $deltaX, $deltaY)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Maximum</label>
+                        <input type="text" class="form-control" ng-model="vm.threshold.max" placeholder="Maximum" msd-wheel="vm.updateThresholdMax($event, $delta, $deltaX, $deltaY)" />
+                    </div>
+                </div>
+            </div>
+            <div class="aside-footer">
+                <button class="btn btn-success" ng-click="vm.analyzeAoi()">Analyze</button>
+                <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

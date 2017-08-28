@@ -1,12 +1,15 @@
 <div class="row">
     <div id="sidebar-container" class="col-xs-4 col-sm-3 col-md-2">
-        <sigma-sidebar mode="search"></sigma-sidebar>
+        <sigma-sidebar mode="vm.mode"></sigma-sidebar>
     </div>
     <div id="map-container" class="col-xs-8 col-sm-9 col-md-10">
-        <sigma-map mode="search"></sigma-map>
-        <sigma-time-slider mode="search"></sigma-time-slider>
-        <div id="charts-container">
+        <sigma-playback ng-if="vm.mode === 'analyze'"></sigma-playback>
+        <sigma-map mode="vm.mode" bbox="vm.bbox"></sigma-map>
+        <sigma-time-slider mode="vm.mode"></sigma-time-slider>
+        <div id="charts-container" ng-if="vm.mode === 'search'">
             <sigma-radial></sigma-radial>
         </div>
+        <sigma-point-converter id="scatter-plot" y-property="intensity" x-property="time" ng-if="vm.mode === 'analyze'"></sigma-point-converter>
+        <sigma-correlation-analysis ng-if="vm.mode === 'analyze'"></sigma-correlation-analysis>
     </div>
 </div>

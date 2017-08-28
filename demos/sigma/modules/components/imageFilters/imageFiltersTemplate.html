@@ -1,27 +1,48 @@
-<div class="form-group" ng-repeat="slider in vm.sliders">
-    <div ng-if="!slider.isDivider">
-        <button type="button"
-                class="btn btn-default btn-xs pull-right"
-                ng-click="vm.reset(slider.id, slider.default)">
-            Reset
-        </button>
+<div class="form-group" ng-repeat="control in vm.controls">
+    <div ng-if="! control.isDivider">
+        <div ng-if="control.switch">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label ng-attr-for="{{ control.id }}-switch">
+                        {{ control.name }}
+                    </label>
+                </div>
+                <div class="col-sm-8 text-right">
+                    <toggle-switch class="switch-success"
+                                   ng-attr-id="{{ control.id }}-switch"
+                                   ng-if="control.switch"
+                                   value="{{ vm.canvasImageOverlay[control.id] }}"
+                                   ng-model="vm.canvasImageOverlay[control.id]"
+                                   ng-change="vm.render()">
+                    </toggle-switch>
+                </div>
+            </div>
+        </div>
 
-        <label ng-attr-for="{{ slider.id }}-slider">
-            {{ slider.name }}
-        </label>
+        <div ng-if="! control.switch">
+            <button type="button"
+                    class="btn btn-default btn-xs pull-right"
+                    ng-click="vm.reset(control.id, control.default)">
+                Reset
+            </button>
 
-        <input ng-attr-id="{{ slider.id }}-slider"
-               type="range"
-               min="{{ slider.min }}"
-               max="{{ slider.max }}"
-               value="{{ vm.canvasImageOverlay[slider.id] }}"
-               step="1"
-               ng-model="vm.canvasImageOverlay[slider.id]"
-               data-title="{{ vm.canvasImageOverlay[slider.id] }}{{ slider.units }}"
-               data-placement="bottom"
-               bs-tooltip
-               ng-change="vm.render()">
+            <label ng-attr-for="{{ control.id }}-control">
+                {{ control.name }}
+            </label>
+
+            <input ng-attr-id="{{ control.id }}-control"
+                   type="range"
+                   min="{{ control.min }}"
+                   max="{{ control.max }}"
+                   value="{{ vm.canvasImageOverlay[control.id] }}"
+                   step="{{ control.step }}"
+                   ng-model="vm.canvasImageOverlay[control.id]"
+                   data-title="{{ vm.canvasImageOverlay[control.id] }}{{ control.units }}"
+                   data-placement="bottom"
+                   bs-tooltip
+                   ng-change="vm.render()">
+        </div>
     </div>
 
-    <hr ng-if="slider.isDivider">
+    <hr ng-if="control.isDivider">
 </div>

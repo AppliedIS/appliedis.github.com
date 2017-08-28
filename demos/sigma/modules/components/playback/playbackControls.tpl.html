@@ -46,5 +46,13 @@
                 </toggle-switch>
             </div>
         </div>
+        <div class="margin-top-md">
+            <label>Show images that were captured between</label>
+            <div class="row">
+                <div class="col-xs-2" id="playbackStartTime"><input type="text" class="form-control input-sm" ng-model="vm.playbackStart" ng-change="vm.setPlaybackFilter()" name="playbackStartTime" data-autoclose="true" data-timezone="UTC" data-time-format="HH:mm:ss" data-time-type="iso" data-container="body" bs-timepicker></div>
+                <div class="col-xs-1 text-center">and</div>
+                <div class="col-xs-2" id="playbackStopTime"><input type="text" class="form-control input-sm" ng-model="vm.playbackStop" ng-change="vm.setPlaybackFilter()" name="playbackStopTime" data-autoclose="true" data-timezone="UTC" data-time-format="HH:mm:ss" data-time-type="iso" data-container="body" bs-timepicker></div>
+            </div>
+        </div>
     </div>
 </div>

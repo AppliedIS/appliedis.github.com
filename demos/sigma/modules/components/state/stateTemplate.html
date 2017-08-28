@@ -1,0 +1,43 @@
+<div class="section" ng-if="vm.sigmaConfig.components.state && !vm.disableSaveState">
+    <div class="header" ng-click="vm.toggleExpanded()">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            Favorites
+        </h4>
+    </div>
+    <div class="sensor margin-top-md margin-bottom-md" ng-show="vm.expanded">
+        <div class="text-center margin-top-lg margin-bottom-lg btn-container">
+
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="vm.selectedState.title" ng-model-options="{ updateOn: 'blur' }" ng-change="vm.updateStateTitle()" ng-disabled="!vm.selectedState">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-disabled="vm.states.length === 0" data-animation="am-flip-x" data-placement="bottom-right" bs-dropdown><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="state in vm.states">
+                        <a class="dropdown-menu-item" ng-click="vm.getState(state)">{{ state.title }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="btn-group btn-group-justified margin-top-md" role="group">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" ng-click="vm.createState()" data-title="Create" data-placement="bottom" bs-tooltip><i class="fa fa-plus-square"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" ng-click="vm.saveState()" ng-disabled="!vm.selectedState" data-title="Save" data-placement="bottom" bs-tooltip><i class="fa fa-save"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" ng-click="vm.resetState()" ng-disabled="!vm.selectedState" data-title="Reset" data-placement="bottom" bs-tooltip><i class="fa fa-undo"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" bs-popover="vm.popover" data-placement="bottom" data-container="body" data-animation="am-flip-x" ng-disabled="!vm.selectedState" data-title="Share" bs-tooltip><i class="fa fa-share-alt"></i></button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger" ng-click="vm.deleteState()" ng-disabled="!vm.selectedState" data-title="Delete" data-placement="bottom" bs-tooltip><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

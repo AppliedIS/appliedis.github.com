@@ -10,7 +10,7 @@
 
                 </div>
                 <div class="modal-body text-center">
-                    <div id="analysisImage"></div>
+                    <img ng-src="{{ vm.correlationSrc }}" class="img-responsive" ng-if="vm.correlationSrc"/>
                 </div>
                 <div class="modal-footer">
                     <a ng-href="{{ vm.geotiffLink }}" download="{{ vm.geotiffFilename }}" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
