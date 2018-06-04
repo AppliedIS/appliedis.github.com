@@ -1,0 +1,36 @@
+{
+    "type":"FeatureCollection",
+    "totalFeatures":10,
+    "features":[
+        {
+            "type":"Feature",
+            "id":"strike-log.90003",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[0,0]
+            },
+            "geometry_name":"geom",
+            "properties":{
+                "ENTITY NAME":"MY ENTITY",
+                "LAT":"000000N",
+                "LONG":"0000000E",
+                "ORD1":"1",
+                "ORDNANCE_1":"WATER-BALLOON",
+                "ORD2":"",
+                "ORDNANCE_2":"",
+                "ORD3":"",
+                "ORDNANCE_3":"",
+                "ORD4":"",
+                "ORDNANCE_4":"",
+                "ORD5":"",
+                "ORDNANCE_5":"",
+                "ORD6":"",
+                "ORDNANCE_6":"",
+                "ORD7":"",
+                "ORDNANCE_7":"",
+                "TARGETS REMARK":"DUDE IS ALL SOAKED",
+                "date_time":"2017-06-01T12:30:00Z"
+            }
+        }
+    ]
+}

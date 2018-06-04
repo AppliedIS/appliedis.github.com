@@ -1,0 +1,22 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="fmv-filter-container" ng-if="vm.erisConfig.components.fmvFilter">
+    <div class="fmv-filter" layout="row" layout-align="space-between center">
+        <div>
+            <md-tooltip ng-show="vm.zoomLevel < 6">Disabled due to current zoom level. Zoom in to re-enable.</md-tooltip>
+            <md-switch ng-model="vm.fmvFilterChecked" ng-disabled="vm.zoomLevel < 6" aria-label="FMV Filter">
+                FMV Filter
+            </md-switch>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="vm.updateFMV(true)" ng-disabled="vm.fmvResults === null || vm.fmvFilter === 'disabled' || vm.refreshFMVClass === 'fa-spin'">
+                <i class="fa fa-refresh" ng-class="vm.refreshFMVClass"></i>
+                Update
+            </md-button>
+        </div>
+    </div>
+</div>

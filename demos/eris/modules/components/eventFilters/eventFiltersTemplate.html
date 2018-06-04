@@ -1,0 +1,95 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="event-filters-container" ng-if="vm.erisConfig.components.eventFilters">
+    <md-toolbar class="md-hue-2" ng-click="vm.toggleExpanded()">
+        <div class="md-toolbar-tools">
+            <h4>
+                <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+                Event Filters
+            </h4>
+        </div>
+    </md-toolbar>
+    <md-list class="event-filters" ng-show="vm.expanded">
+        <eris-fmv-filter></eris-fmv-filter>
+        <md-divider></md-divider>
+        <eris-vote-filter></eris-vote-filter>
+        <md-divider></md-divider>
+        <eris-sensor-filter></eris-sensor-filter>
+        <md-divider></md-divider>
+        <eris-country-filter></eris-country-filter>
+        <md-divider></md-divider>
+        <div class="confidence-filter-container">
+            <span>Confidence</span>
+            <div class="confidence-filter" layout="row" layout-align="start center">
+                <md-slider-container flex="85">
+                    <md-slider flex min="0" max="{{ vm.erisConfig.maxConfidence }}" round="6" step="1" ng-model="vm.confidence" aria-label="Confidence" id="confidence-slider"></md-slider>
+                </md-slider-container>
+                <md-input-container flex="15">
+                    <input flex type="number" step="1" ng-model="vm.confidence" aria-label="Confidence" aria-controls="confidence-slider">
+                </md-input-container>
+            </div>
+        </div>
+        <md-divider></md-divider>
+        <div class="location-uncertainty-filter-container">
+            <span>Location Uncertainty (meters)</span>
+            <div class="location-uncertainty-filter" layout="row" layout-align="start center">
+                <md-slider-container flex="85">
+                    <md-slider flex md-invert min="0" max="{{ vm.erisConfig.maxLocationUncertainty }}" round="0" step="1" ng-model="vm.locationUncertainty" aria-label="Location Uncertainty" id="location-uncertainty-slider"></md-slider>
+                </md-slider-container>
+                <md-input-container flex="15">
+                    <input flex type="number" step="1" ng-model="vm.locationUncertainty" aria-label="Location Uncertainty" aria-controls="location-uncertainty-slider">
+                </md-input-container>
+            </div>
+        </div>
+        <md-divider></md-divider>
+        <div class="intensity-filter-container">
+            <span>Intensity (kW/sr/µm)</span>
+            <div class="intensity-filter">
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="50">
+                        <label>Min</label>
+                        <input flex type="number" step="1" ng-model="vm.intensity.min" ng-model-options="{ debounce: 1000 }" aria-label="Intensity Min" aria-controls="intensity-min-slider">
+                    </md-input-container>
+                    <md-input-container flex="50">
+                        <label>Max</label>
+                        <input flex type="number" step="1" ng-model="vm.intensity.max" ng-model-options="{ debounce: 1000 }" aria-label="Intensity Max" aria-controls="intensity-max-slider">
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+        <div class="snr-filter-container">
+            <span>Signal-to-Noise Ratio</span>
+            <div class="snr-filter">
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="50">
+                        <label>Min</label>
+                        <input flex type="number" step="1" ng-model="vm.snr.min" ng-model-options="{ debounce: 1000 }" aria-label="SNR Min" aria-controls="snr-min-slider">
+                    </md-input-container>
+                    <md-input-container flex="50">
+                        <label>Max</label>
+                        <input flex type="number" step="1" ng-model="vm.snr.max" ng-model-options="{ debounce: 1000 }" aria-label="SNR Max" aria-controls="snr-max-slider">
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+        <div class="duration-filter-container">
+            <span>Duration (seconds)</span>
+            <div class="duration-filter">
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="50">
+                        <label>Min</label>
+                        <input flex type="number" step="1" ng-model="vm.duration.min" ng-model-options="{ debounce: 1000 }" aria-label="Duration Min" aria-controls="duration-min-slider">
+                    </md-input-container>
+                    <md-input-container flex="50">
+                        <label>Max</label>
+                        <input flex type="number" step="1" ng-model="vm.duration.max" ng-model-options="{ debounce: 1000 }" aria-label="Duration Max" aria-controls="duration-max-slider">
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+    </md-list>
+</div>

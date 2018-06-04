@@ -1,0 +1,131 @@
+{
+    "x_column": {
+        "scale": "linear",
+        "min": 1.234,
+        "column": "time",
+        "max": 2.345,
+        "label": "Time",
+        "units": {
+            "value": "event_secs",
+            "label": "sec from event"
+        }
+    },
+    "classification": "UNCLASSIFIED",
+    "column_options": [
+        {
+            "column": "intensity",
+            "units": [
+                {
+                    "ascii_label": "intensity",
+                    "value": "intensity",
+                    "label": "intensity"
+                }
+            ],
+            "label": "Intensity",
+            "default_scale": "log"
+        },
+        {
+            "column": "snr",
+            "units": [
+                {
+                    "value": "unit_less",
+                    "label": "unit-less"
+                }
+            ],
+            "label": "Signal / Noise",
+            "default_scale": "linear"
+        },
+        {
+            "column": "time",
+            "units": [
+                {
+                    "value": "event_secs",
+                    "label": "sec from event"
+                },
+                {
+                    "value": "secs_past_epoch",
+                    "label": "absolute"
+                },
+                {
+                    "value": "secs_past_mid",
+                    "label": "sec from midnight"
+                }
+            ],
+            "label": "Time",
+            "default_scale": "linear"
+        },
+        {
+            "column": "latitude",
+            "units": [
+                {
+                    "value": "degrees",
+                    "label": "degrees"
+                }
+            ],
+            "label": "Latitude",
+            "default_scale": "linear"
+        },
+        {
+            "column": "altitude",
+            "units": [
+                {
+                    "value": "km",
+                    "label": "km"
+                },
+                {
+                    "value": "feet",
+                    "label": "ft"
+                },
+                {
+                    "value": "meters",
+                    "label": "m"
+                }
+            ],
+            "label": "Altitude",
+            "default_scale": "linear"
+        },
+        {
+            "column": "longitude",
+            "units": [
+                {
+                    "value": "degrees",
+                    "label": "degrees"
+                }
+            ],
+            "label": "Longitude",
+            "default_scale": "linear"
+        }
+    ],
+    "started": "2016-01-01T00:00:00Z",
+    "ended": "2016-01-01T00:01:00Z",
+    "y_column": {
+        "scale": "log",
+        "min": -1,
+        "column": "intensity",
+        "max": 1,
+        "label": "Intensity",
+        "units": {
+            "ascii_label": "intensity",
+            "value": "intensity",
+            "label": "intensity"
+        }
+    },
+    "objects": ["UTYP"],
+    "sensors": [
+        "A0B1 1gb",
+        "A2B4 100gb",
+        "C2D3 1gb",
+        "C2D3 100gb",
+        "C4D5 10gb",
+        "E4F5 100gb"
+    ],
+    "scale_options": ["linear","log"],
+    "points": [
+        [
+            1.234,
+            0,
+            0,
+            -1
+        ]
+    ]
+}

@@ -1,0 +1,87 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<form name="temporalFilterForm">
+<div ng-if="vm.erisConfig.components.temporalFilter">
+    <md-toolbar class="md-hue-2" ng-click="vm.toggleExpanded()">
+        <div class="md-toolbar-tools">
+            <h4>
+                <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span> Date/Time
+            </h4>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <div class="temporal-filter" ng-show="vm.expanded">
+        <div class="range-filter">
+            <h5 ng-class="{error: vm.invalid}">Start Date</h5>
+            <div layout="row" layout-xs="column">
+                <div flex>
+                    <md-input-container class="md-block">
+                        <md-icon id="start-date-icon" md-font-icon="fa fa-calendar"></md-icon>
+                        <input ng-utc-datepicker data-trigger="start-date-icon" ng-model="vm.start" ng-change="vm.setTime('start')" aria-label="Start" ng-disabled="vm.poll"/>
+                    </md-input-container>
+                </div>
+                <div flex>
+                    <div layout="row" layout-align="start center">
+                        <div><i class="fa fa-clock-o"></i></div>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Hour" ng-model="vm.startTime.hour" ng-change="vm.changeTime('startTime', 'hour')" ng-keydown="vm.keydown($event, 'hour', 'startTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Minute" ng-model="vm.startTime.minute" ng-change="vm.changeTime('startTime', 'minute')" ng-keydown="vm.keydown($event, 'minute', 'startTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Second" ng-model="vm.startTime.second" ng-change="vm.changeTime('startTime', 'second')" ng-keydown="vm.keydown($event, 'second', 'startTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        Z
+                    </div>
+                </div>
+            </div>
+            <h5 ng-class="{error: vm.invalid}">End Date</h5>
+            <div layout="row" layout-xs="column">
+                <div flex>
+                    <md-input-container class="md-block">
+                        <md-icon id="stop-date-icon" md-font-icon="fa fa-calendar"></md-icon>
+                        <input ng-utc-datepicker data-trigger="stop-date-icon" ng-model="vm.stop" ng-change="vm.setTime('stop')" aria-label="Stop" ng-disabled="vm.poll"/>
+                    </md-input-container>
+                </div>
+                <div flex>
+                    <div layout="row" layout-align="start center">
+                        <div><i class="fa fa-clock-o"></i></div>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Hour" ng-model="vm.stopTime.hour" ng-change="vm.changeTime('stopTime', 'hour')" ng-keydown="vm.keydown($event, 'hour', 'stopTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Minute" ng-model="vm.stopTime.minute" ng-change="vm.changeTime('stopTime', 'minute')" ng-keydown="vm.keydown($event, 'minute', 'stopTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        <md-input-container md-no-float class="md-block">
+                            <input type="tel" placeholder="Second" ng-model="vm.stopTime.second" ng-change="vm.changeTime('stopTime', 'second')" ng-keydown="vm.keydown($event, 'second', 'stopTime')" ng-disabled="!vm.stop || vm.poll" />
+                        </md-input-container>
+                        Z
+                    </div>
+                </div>
+            </div>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised md-primary step-back" ng-disabled="vm.poll" aria-label="Backward" ng-click="vm.stepRange('backward')">
+                    <md-tooltip>Step Back</md-tooltip>
+                    <i class="fa fa-chevron-left"></i>
+                </md-button>
+                <md-button class="md-raised md-accent apply" ng-disabled="vm.applyBtnDisabled || vm.poll" aria-label="Apply Temporal Filter" ng-click="vm.setTemporalFilter()">
+                    <md-tooltip>Apply Temporal Filter</md-tooltip>
+                    Apply
+                </md-button>
+                <md-button class="md-raised md-primary step-forward" ng-disabled="vm.poll" aria-label="Forward" ng-click="vm.stepRange('forward')">
+                    <md-tooltip>Step Forward</md-tooltip>
+                    <i class="fa fa-chevron-right"></i>
+                </md-button>
+            </div>
+            <div layout="row" layout-xs="column" layout-align="center center" class="ranges">
+                <md-button ng-repeat="range in vm.ranges" ng-click="vm.setRange(range.units, range.unitOfTime)">Last <br /> {{ range.label }}</md-button>
+           </div>
+        </div>
+    </div>
+</div>
+</form>

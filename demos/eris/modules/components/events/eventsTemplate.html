@@ -1,0 +1,39 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="events-container" ng-controller="eventsController as vm">
+    <md-content>
+        <div style="height: {{ vm.eventsHeight }}px" ng-show="vm.mapEvents.length === 0">
+            <div class="absolute-center">
+                <h2 md-colors="{ color: 'grey-800' }">No events found. Try changing your search parameters.</h2>
+            </div>
+        </div>
+        <md-virtual-repeat-container class="table-responsive-vertical" md-top-index="vm.topIndex" ng-style="{ height: vm.eventsHeight }" ng-show="vm.mapEvents.length > 0">
+            <table id="table" class="table table-condensed table-hover">
+                <thead>
+                <tr>
+                    <th ng-click="vm.changeSort('source')">Source <i ng-class="vm.getSortClass('source')"></i></th>
+                    <th ng-click="vm.changeSort('type')" class="text-center">Type <i ng-class="vm.getSortClass('type')"></i></th>
+                    <th ng-click="vm.changeSort('date')">Date <i ng-class="vm.getSortClass('date')"></i></th>
+                    <th ng-click="vm.changeSort('latitude')">Latitude <i ng-class="vm.getSortClass('latitude')"></i></th>
+                    <th ng-click="vm.changeSort('longitude')">Longitude <i ng-class="vm.getSortClass('longitude')"></i></th>
+                    <th class="text-center" ng-click="vm.changeSort('vote')">Your Vote <i ng-class="vm.getSortClass('vote')"></i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="map-event" md-virtual-repeat="mapEvent in vm.mapEvents" ng-click="vm.showEvent($event, mapEvent)" md-colors="{ background: mapEvent.active ? vm.erisConfig.activeColor : vm.erisConfig.inactiveColor }" ng-mouseover="vm.showPopup($event, mapEvent)" ng-mouseleave="vm.hidePopup()">
+                    <td data-title="Source"><i class="fa fa-circle" style="color: {{ mapEvent.eventSource.color }}"></i> {{ mapEvent.eventSource.title }}</td>
+                    <td data-title="Type" class="text-center"><i class="fa" ng-class="mapEvent.eventType.icon"></i></td>
+                    <td data-title="Date">{{ vm.moment.utc(mapEvent.properties.event_time).format('YYYY-MM-DD HH:mm:ss[Z]') }}</td>
+                    <td data-title="Latitude">{{ mapEvent.properties.event_lat }}</td>
+                    <td data-title="Longitude">{{ mapEvent.properties.event_lon }}</td>
+                    <td data-title="Vote" class="text-center"><i class="fa" md-colors="{ color: mapEvent.vote.voteColor || 'grey-700' }" ng-class="mapEvent.vote.voteClass"></i></td>
+                </tr>
+                </tbody>
+            </table>
+        </md-virtual-repeat-container>
+    </md-content>
+</div>

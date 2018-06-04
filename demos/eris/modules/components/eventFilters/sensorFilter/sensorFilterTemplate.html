@@ -1,0 +1,17 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="sensor-filter-container" ng-if="vm.erisConfig.components.sensorFilter">
+    <md-list class="sensor-filter">
+        <span>Sensors</span>
+        <div layout="row" layout-align="space-between center">
+            <md-select flex multiple ng-model="vm.sensors" class="md-no-underline" aria-label="Sensor" placeholder="Select...">
+                <md-option ng-repeat="sensor in vm.sensorList track by $index" ng-value="sensor">{{ sensor }}</md-option>
+            </md-select>
+            <md-button class="md-raised md-primary" ng-click="vm.filterBySensors()">Apply</md-button>
+        </div>
+    </md-list>
+</div>

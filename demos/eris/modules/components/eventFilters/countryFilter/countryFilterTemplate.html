@@ -1,0 +1,20 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="country-filter-container" ng-if="vm.erisConfig.components.countryFilter">
+    <md-list class="country-filter">
+        <span>Countries</span>
+        <div class="loading-countries" ng-show="vm.loadingCountries">
+            <md-progress-linear class="md-accent" md-mode="indeterminate"></md-progress-linear>
+        </div>
+        <div layout="row" layout-align="space-between center" ng-show="!vm.loadingCountries">
+            <md-select flex multiple ng-model="vm.selectedCountries" ng-model-options="{ trackBy: '$value.gid' }" class="md-no-underline" aria-label="Country" placeholder="Select...">
+                <md-option ng-repeat="country in vm.countries track by $index" ng-value="country">{{ country.country }}</md-option>
+            </md-select>
+            <md-button class="md-raised md-primary" ng-click="vm.filterByCountries()">Apply</md-button>
+        </div>
+    </md-list>
+</div>

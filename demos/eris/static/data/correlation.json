@@ -1,0 +1,22 @@
+{
+    "type":"FeatureCollection",
+    "totalFeatures":1,
+    "features":[
+        {
+            "type":"Feature",
+            "id":"correlating_events.fid",
+            "geometry":null,
+            "properties":{
+                "product_id_1":"0000000000",
+                "identity_1":true,
+                "dataset_id_1":7,
+                "file_path_1":"https://support.hdfgroup.org/ftp/HDF5/examples/examples-by-api/matlab/HDF5_M_Examples/h5ex_d_unlimadd.h5",
+                "product_id_2":"0000000001",
+                "identity_2":false,
+                "dataset_id_2":1,
+                "file_path_2":"https://support.hdfgroup.org/ftp/HDF5/examples/examples-by-api/matlab/HDF5_M_Examples/h5ex_d_shuffle.h5"
+            }
+        }
+    ],
+    "crs":null
+}

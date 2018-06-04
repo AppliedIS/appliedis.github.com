@@ -1,0 +1,40 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div ng-controller="sidebarController as vm">
+    <md-content>
+        <div class="sidebar" md-colors="{ background: vm.erisConfig.inactiveColor }">
+            <header>
+                <h2 class="logo" md-colors="{ color: 'amber-600' }">{{ vm.logo }}</h2>
+                <span class="help" ng-if="vm.erisConfig.userGuideUrl">
+                    <md-menu md-position-mode="target-right target">
+                        <md-button aria-label="Open help menu" class="md-raised md-icon-button" ng-click="vm.openMenu($mdMenu, $event)">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </md-button>
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button href="{{ vm.userGuideUrl }}" target="_blank">
+                                    <i class="fa fa-fw fa-user-circle"></i> User Guide
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button href="{{ vm.infoUrl }}" target="_blank">
+                                    <i class="fa fa-fw fa-info-circle"></i> {{ vm.infoLabel }}
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </span>
+            </header>
+            <eris-temporal-filter expanded="true"></eris-temporal-filter>
+            <eris-event-filters expanded="false"></eris-event-filters>
+            <eris-source-filter expanded="false"></eris-source-filter>
+            <eris-type-filter expanded="false"></eris-type-filter>
+            <eris-goto expanded="false"></eris-goto>
+            <eris-admin expanded="false" ng-if="vm.isAdmin"></eris-admin>
+        </div>
+    </md-content>
+</div>

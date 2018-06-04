@@ -1,0 +1,38 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<md-toolbar class="md-hue-2" ng-click="vm.toggleExpanded()">
+    <div class="md-toolbar-tools">
+        <h4>
+            <span class="fa" ng-class="vm.expanded ? 'fa-chevron-circle-down' : 'fa-chevron-circle-right'"></span>
+            Admin
+        </h4>
+    </div>
+</md-toolbar>
+<div class="admin-container" ng-show="vm.expanded">
+    <h3>Alert Configuration</h3>
+    <md-input-container>
+        <label>Type</label>
+        <md-select ng-model="vm.alertClass">
+            <md-option ng-repeat="type in vm.types" value="{{ type.value }}">
+                {{ type.label }}
+            </md-option>
+        </md-select>
+    </md-input-container>
+
+    <md-input-container>
+        <label>Message</label>
+        <input ng-model="vm.alertMessage">
+    </md-input-container>
+
+    <div class="admin-footer" layout="row" layout-align="space-between">
+        <md-checkbox ng-model="vm.alertIsActive" aria-label="Active">
+            <div>Active</div>
+        </md-checkbox>
+
+        <md-button class="md-raised md-accent" ng-click="vm.updateAlert()">Update</md-button>
+    </div>
+</div>

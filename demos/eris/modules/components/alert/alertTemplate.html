@@ -1,0 +1,14 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="alert-container" ng-if="vm.alert && vm.alert.is_active">
+    <md-toolbar ng-class="vm.alert.class">
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate ng-bind="vm.alert.message"></h2>
+            <md-button class="md-icon-button" ng-click="vm.close()" aria-label="Dismiss" ng-bind-html="vm.closeIcon"></md-button>
+        </div>
+    </md-toolbar>
+</div>

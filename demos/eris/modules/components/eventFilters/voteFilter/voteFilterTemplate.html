@@ -1,0 +1,30 @@
+<!--******************************************************************************
+ UNCLASSIFIED
+ © 2016 Applied Information Sciences
+ See COPYRIGHT.txt for licensing information
+ ******************************************************************************-->
+
+<div class="vote-filter-container" ng-if="vm.erisConfig.components.voteFilter">
+    <div class="vote-filter" layout="row" layout-align="space-between center">
+        <div>
+            <md-switch ng-model="vm.voteFilterChecked" aria-label="Vote Filter">
+                Vote Filter
+            </md-switch>
+        </div>
+        <div>
+            <md-slider-container>
+                <md-slider md-discrete min="1" max="5" step="1" ng-model="vm.totalVotes" aria-label="Total Votes" id="vote-slider" ng-disabled="!vm.voteFilterChecked"></md-slider>
+            </md-slider-container>
+        </div>
+        <div>
+            <md-button md-colors="{ background: vm.voteUpBtnColor() }" class="md-raised md-icon-button" ng-click="vm.setVoteType('Up')">
+                <i class="fa fa-thumbs-up"></i>
+                <md-tooltip>Upvotes</md-tooltip>
+            </md-button>
+            <md-button md-colors="{ background: vm.voteDownBtnColor() }" class="md-raised md-icon-button" ng-click="vm.setVoteType('Down')">
+                <i class="fa fa-thumbs-down"></i>
+                <md-tooltip>Downvotes</md-tooltip>
+            </md-button>
+        </div>
+    </div>
+</div>
