@@ -32,7 +32,7 @@
                     type: 'component',
                     componentName: 'template',
                     componentState: {
-                        templateId: 'modules/components/sidebar/sidebarTemplate.html',
+                        templateId: '/demos/eris/modules/components/sidebar/sidebarTemplate.html',
                         templateName: 'navigation',
                         templateTitle: 'Navigation'
                     }
@@ -47,7 +47,7 @@
                         type: 'component',
                         componentName: 'template',
                         componentState: {
-                            templateId: 'modules/components/map/mapTemplate.html',
+                            templateId: '/demos/eris/modules/components/map/mapTemplate.html',
                             templateName: 'map',
                             templateTitle: 'Map'
                         }
@@ -59,7 +59,7 @@
                         type: 'component',
                         componentName: 'template',
                         componentState: {
-                            templateId: 'modules/components/events/eventsTemplate.html',
+                            templateId: '/demos/eris/modules/components/events/eventsTemplate.html',
                             templateName: 'events',
                             templateTitle: 'Events'
                         }
@@ -72,7 +72,7 @@
                     type: 'component',
                     componentName: 'template',
                     componentState: {
-                        templateId: 'modules/components/eventViewer/eventViewerTemplate.html',
+                        templateId: '/demos/eris/modules/components/eventViewer/eventViewerTemplate.html',
                         templateName: 'eventViewer',
                         templateTitle: 'Event Details'
                     }
@@ -2282,7 +2282,7 @@
     angular.module('eris').directive('erisAdmin', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/admin/adminTemplate.html',
+            templateUrl: '/demos/eris/modules/components/admin/adminTemplate.html',
             controller: 'adminController',
             controllerAs: 'vm',
             scope: {
@@ -2352,7 +2352,7 @@
     angular.module('eris').directive('erisAlert', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/alert/alertTemplate.html',
+            templateUrl: '/demos/eris/modules/components/alert/alertTemplate.html',
             controller: 'alertController',
             controllerAs: 'vm',
             scope: {}
@@ -2533,7 +2533,7 @@
     angular.module('eris').directive('erisEventFilters', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/eventFilters/eventFiltersTemplate.html',
+            templateUrl: '/demos/eris/modules/components/eventFilters/eventFiltersTemplate.html',
             controller: 'eventFiltersController',
             controllerAs: 'vm',
             scope: {
@@ -3437,7 +3437,7 @@
             $mdDialog.show({
                 clickOutsideToClose: true,
                 controller: 'metadataDialogController',
-                templateUrl: 'modules/components/eventViewer/metadataDialogTemplate.html',
+                templateUrl: '/demos/eris/modules/components/eventViewer/metadataDialogTemplate.html',
                 targetEvent: ev,
                 locals: {
                     eventMetadatas: evMetadatas
@@ -4127,7 +4127,7 @@
     angular.module('eris').directive('erisGoto', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/goto/gotoTemplate.html',
+            templateUrl: '/demos/eris/modules/components/goto/gotoTemplate.html',
             controller: 'gotoController',
             controllerAs: 'vm',
             scope: {
@@ -4252,7 +4252,7 @@
     angular.module('eris').directive('erisLocationFormat', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/locationFormat/locationFormatTemplate.html',
+            templateUrl: '/demos/eris/modules/components/locationFormat/locationFormatTemplate.html',
             controller: 'locationFormatController',
             controllerAs: 'vm',
             scope: {}
@@ -5453,7 +5453,7 @@
     angular.module('eris').directive('erisSourceFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/sourceFilter/sourceFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/sourceFilter/sourceFilterTemplate.html',
             controller: 'sourceFilterController',
             controllerAs: 'vm',
             scope: {
@@ -5712,7 +5712,7 @@
     angular.module('eris').directive('erisTemporalFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/temporalFilter/temporalFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/temporalFilter/temporalFilterTemplate.html',
             controller: 'temporalFilterController',
             controllerAs: 'vm',
             scope: {
@@ -5803,7 +5803,7 @@
     angular.module('eris').directive('erisTypeFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/typeFilter/typeFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/typeFilter/typeFilterTemplate.html',
             controller: 'typeFilterController',
             controllerAs: 'vm',
             scope: {
@@ -5895,7 +5895,7 @@
     angular.module('eris').directive('erisCountryFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/eventFilters/countryFilter/countryFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/eventFilters/countryFilter/countryFilterTemplate.html',
             controller: 'countryFilterController',
             controllerAs: 'vm',
             scope: {}
@@ -5960,7 +5960,7 @@
     angular.module('eris').directive('erisSensorFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/eventFilters/sensorFilter/sensorFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/eventFilters/sensorFilter/sensorFilterTemplate.html',
             controller: 'sensorFilterController',
             controllerAs: 'vm',
             scope: {}
@@ -6086,7 +6086,7 @@
     angular.module('eris').directive('erisFmvFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/eventFilters/fmvFilter/fmvFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/eventFilters/fmvFilter/fmvFilterTemplate.html',
             controller: 'fmvFilterController',
             controllerAs: 'vm',
             scope: {}
@@ -6219,7 +6219,7 @@
     angular.module('eris').directive('erisVoteFilter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'modules/components/eventFilters/voteFilter/voteFilterTemplate.html',
+            templateUrl: '/demos/eris/modules/components/eventFilters/voteFilter/voteFilterTemplate.html',
             controller: 'voteFilterController',
             controllerAs: 'vm',
             scope: {}
