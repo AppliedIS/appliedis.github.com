@@ -6694,14 +6694,7 @@
         // Alert service
         $httpBackend.whenGET(alertRegex).respond(function (method, url) {
             console.log(url);
-            var alertData = [{
-                alert_id: 1,
-                class: 'md-warn',
-                message: 'Don\'t Panic',
-                started: '2018-02-14T10:08:45.000Z',
-                ended: '2018-02-14T10:08:45.000Z',
-                is_active: true
-            }];
+            var alertData = [];
             return [200, JSON.stringify(alertData), {}];
         });
     }]);
