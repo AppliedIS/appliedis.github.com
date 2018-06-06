@@ -6249,15 +6249,15 @@
         var voterNameRegex = new RegExp('^' + erisConfig.erisApi.url + '/voters', 'i'),
             voterRegex = new RegExp('^' + erisConfig.erisApi.url + '/votes/voter', 'i'),
             votesRegex = new RegExp('^' + erisConfig.erisApi.url + '/votes', 'i'),
-            reasonsOverrideUrl = './static/data/reasons.json',
+            reasonsOverrideUrl = '/demos/eris/static/data/reasons.json',
             reasonsRegex = new RegExp('^' + erisConfig.erisApi.url + '/reasons', 'i'),
             eventsRegex = new RegExp('^' + erisConfig.server.url, 'i'),
             plotDataRegex = new RegExp('^' + erisConfig.eventServer.ajaxUrl + '/plot-data', 'i'),
             framesRegex = new RegExp('^' + erisConfig.eventServer.ajaxUrl + '/frames', 'i'),
             gifRegex = new RegExp('^' + erisConfig.erisApi.url + '/gif', 'i'),
             fmvRegex = new RegExp('^' + erisConfig.fmv.url, 'i'),
-            correlationOverrideUrl = './static/data/correlation.json',
-            countriesOverrideUrl = './static/data/countries.json',
+            correlationOverrideUrl = '/demos/eris/static/data/correlation.json',
+            countriesOverrideUrl = '/demos/eris/static/data/countries.json',
             strikeRegex = new RegExp('^' + erisConfig.localServer.url, 'i'),
             scaleRegex = new RegExp('^' + erisConfig.scale.ajaxUrl, 'i'),
             kmlRegex = new RegExp('^' + erisConfig.erisApi.url + '/kml', 'i'),
@@ -6401,7 +6401,7 @@
             var activeEvent = stateService.getActiveEvent();
 
             var request = new XMLHttpRequest();
-            request.open('GET', './static/data/eventTracks.json', false);
+            request.open('GET', '/demos/eris/static/data/eventTracks.json', false);
             request.send(null);
 
             var eventTracks = JSON.parse(request.response);
@@ -6413,7 +6413,7 @@
 
         var generatePlotData = function () {
             var request = new XMLHttpRequest();
-            request.open('GET', './static/data/plotData.json', false);
+            request.open('GET', '/demos/eris/static/data/plotData.json', false);
             request.send(null);
 
             var data = JSON.parse(request.response),
