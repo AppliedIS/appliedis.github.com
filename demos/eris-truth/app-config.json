@@ -1,0 +1,51 @@
+{
+  "version": 1.6,
+  "dataUrl": "http://eris-truth-api.azurewebsites.net",
+  "stateful": "http://stateful.azurewebsites.net",
+  "erisUrl": "http://eris.aisohio.net",
+  "erisDownloadUrl": "http://127.0.0.1:8080",
+  "viewport": {
+    "center": [-79.2064, -46.3767],
+    "zoom": 3
+  },
+  "settings": {
+    "filterByUserVotes": false,
+    "filterByUpvote": false,
+    "filterByDownvote": false,
+    "filterByNoVote": false,
+    "videoSpeed": 1,
+    "minVideoSpeed": 0.125,
+    "maxVideoSpeed": 16,
+    "videoBuffer": 2
+  },
+  "navStyle": {
+    "position": "absolute",
+    "bottom": 0,
+    "left": 0,
+    "padding": "10px"
+  },
+  "defaultBaseMap": "DarkMatter",
+  "baseMaps": [
+    {
+      "id": "darkmatter",
+      "name": "DarkMatter",
+      "url": "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+      "type": "tile"
+    },
+    {
+      "id": "standard",
+      "name": "Standard Map",
+      "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "type": "tile"
+    },
+    {
+      "id": "cycle",
+      "name": "Cycle Map",
+      "url": "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+      "type": "tile"
+    }
+  ],
+  "overlays": [],
+  "dateFormat": "YYYY-MM-DD",
+  "timeFormat": "HH:mm:ss[Z]"
+}
