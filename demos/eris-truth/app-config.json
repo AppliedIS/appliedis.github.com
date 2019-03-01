@@ -1,5 +1,5 @@
 {
-  "version": 1.6,
+  "version": 1.7,
   "dataUrl": "http://eris-truth-api.azurewebsites.net",
   "stateful": "http://stateful.azurewebsites.net",
   "erisUrl": "http://eris.aisohio.net",
@@ -24,6 +24,33 @@
     "left": 0,
     "padding": "10px"
   },
+  "ranges": [
+    {
+      "units": -30,
+      "unitOfTime": "minutes",
+      "label": "30 MIN"
+    },
+    {
+      "units": -1,
+      "unitOfTime": "hours",
+      "label": "1 HR"
+    },
+    {
+      "units": -6,
+      "unitOfTime": "hours",
+      "label": "6 HRS"
+    },
+    {
+      "units": -12,
+      "unitOfTime": "hours",
+      "label": "12 HRS"
+    },
+    {
+      "units": -24,
+      "unitOfTime": "hours",
+      "label": "24 HRS"
+    }
+  ],
   "defaultBaseMap": "DarkMatter",
   "baseMaps": [
     {
