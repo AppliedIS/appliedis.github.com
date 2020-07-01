@@ -1,0 +1,384 @@
+:root {
+    /* Light mode message and state colors not found elsewhere */
+    --color-blaze-orange: hsl(27, 100%, 47%); /* Warning, Caution */
+    --color-laurel-green: hsl(115, 100%, 34%); /* Success, Completed */
+    --color-torch-red: hsl(348, 100%, 55%); /* Error, Danger, Failure */
+
+    /* Dark mode message and state colors not found elsewhere */
+    --color-emerald-green: hsl(141, 53%, 53%); /* Success, Completed */
+    --color-viking-blue: hsl(194, 66%, 61%); /* Active, Info */
+    --color-sunglow-yellow: hsl(42, 98%, 70%); /* Warning, Caution */
+    --color-french-rose: hsl(348, 86%, 61%); /* Error, Danger, Failure */
+    --color-periwinkle: hsl(238, 47%, 68%); /* Pending, Queued */
+
+    /* Neutral Grays */
+    --color-pure-gray-1: hsl(0, 0%, 98%);
+    --color-pure-gray-2: hsl(0, 0%, 96%);
+    --color-pure-gray-3: hsl(0, 0%, 93%);
+    --color-pure-gray-4: hsl(0, 0%, 88%);
+    --color-pure-gray-5: hsl(0, 0%, 74%);
+    --color-pure-gray-6: hsl(0, 0%, 62%); /* Dark mode Paused, Inactive message color */
+    --color-pure-gray-7: hsl(0, 0%, 46%); /* Light mode Paused, Inactive message color */
+    --color-pure-gray-8: hsl(0, 0%, 38%);
+    --color-pure-gray-9: hsl(0, 0%, 26%);
+    --color-pure-gray-9a: hsl(0, 0%, 23%); /* Dark mode */
+    --color-pure-gray-9b: hsl(0, 0%, 20%); /* Dark mode */
+    --color-pure-gray-9c: hsl(0, 0%, 17%); /* Dark mode */
+    --color-pure-gray-10: hsl(0, 0%, 13%);
+    --color-pure-gray-11: hsl(0, 0%, 9%); /* Dark mode */
+
+    /* Warm Neutral Grays */
+    --color-warm-gray-1: hsl(27, 8%, 98%);
+    --color-warm-gray-2: hsl(27, 8%, 96%);
+    --color-warm-gray-3: hsl(27, 8%, 93%);
+    --color-warm-gray-4: hsl(27, 8%, 88%);
+    --color-warm-gray-5: hsl(27, 8%, 74%);
+    --color-warm-gray-6: hsl(27, 8%, 62%);
+    --color-warm-gray-7: hsl(27, 8%, 46%);
+    --color-warm-gray-8: hsl(27, 8%, 38%);
+    --color-warm-gray-9: hsl(27, 8%, 26%);
+    --color-warm-gray-9a: hsl(27, 8%, 23%); /* Dark mode */
+    --color-warm-gray-9b: hsl(27, 8%, 20%); /* Dark mode */
+    --color-warm-gray-9c: hsl(27, 8%, 17%); /* Dark mode */
+    --color-warm-gray-10: hsl(27, 8%, 13%);
+    --color-warm-gray-11: hsl(27, 8%, 9%); /* Dark mode */
+
+    /* Oranges */
+    --color-orange-accent-1: hsl(32, 93%, 83%); /* Dark mode */
+    --color-orange-accent-2: hsl(32, 93%, 74%);
+    --color-orange-accent-3: hsl(32, 93%, 64%);
+    --color-orange-accent-4: hsl(32, 93%, 54%);
+    --color-orange-accent-4d: hsl(32, 83%, 54%);
+    --color-orange-accent-5: hsl(32, 93%, 45%); /* Light mode */
+
+    /* Greens */
+    --color-chartreuse-accent-1: hsl(88, 100%, 78%); /* Dark mode */
+    --color-chartreuse-accent-2: hsl(88, 100%, 67%);
+    --color-chartreuse-accent-3: hsl(93, 100%, 51%);
+    --color-chartreuse-accent-4: hsl(97, 81%, 48%);
+    --color-chartreuse-accent-5: hsl(97, 81%, 36%); /* Light mode */
+
+    --color-green-accent-1: hsl(137, 77%, 85%); /* Dark mode */
+    --color-green-accent-2: hsl(151, 82%, 68%);
+    --color-green-accent-3: hsl(151, 100%, 45%);
+    --color-green-accent-4: hsl(145, 100%, 39%);
+    --color-green-accent-5: hsl(151, 100%, 33%); /* Light mode */
+
+    /* Cyans */
+
+    --color-teal-accent-1: hsl(166, 100%, 83%); /* Dark mode */
+    --color-teal-accent-2: hsl(166, 100%, 70%);
+    --color-teal-accent-3: hsl(165, 82%, 51%);
+    --color-teal-accent-4: hsl(172, 100%, 37%);
+    --color-teal-accent-5: hsl(172, 100%, 33%); /* Light mode */
+
+    /* Teals for light and dark modes */
+    --color-teal-1: hsl(177, 41%, 91%);
+    --color-teal-2: hsl(175, 41%, 79%);
+    --color-teal-3: hsl(174, 42%, 65%);
+    --color-teal-4: hsl(174, 42%, 51%);
+    --color-teal-5: hsl(174, 63%, 40%);
+    --color-teal-6: hsl(174, 100%, 29%);
+    --color-teal-7: hsl(174, 100%, 27%);
+    --color-teal-8: hsl(173, 100%, 24%);
+    --color-teal-9: hsl(173, 100%, 21%);
+    --color-teal-10: hsl(170, 100%, 15%);
+
+    /* Teal grays for dark mode */
+    --color-teal-gray-1: hsl(174, 14%, 98%);
+    --color-teal-gray-2: hsl(174, 14%, 96%);
+    --color-teal-gray-3: hsl(174, 14%, 93%);
+    --color-teal-gray-4: hsl(174, 14%, 88%);
+    --color-teal-gray-5: hsl(174, 14%, 74%);
+    --color-teal-gray-6: hsl(174, 14%, 62%);
+    --color-teal-gray-7: hsl(174, 14%, 46%);
+    --color-teal-gray-8: hsl(174, 14%, 38%);
+    --color-teal-gray-9: hsl(174, 14%, 26%);
+    --color-teal-gray-9a: hsl(174, 14%, 23%);
+    --color-teal-gray-9b: hsl(174, 14%, 20%);
+    --color-teal-gray-9c: hsl(174, 14%, 17%);
+    --color-teal-gray-10: hsl(174, 14%, 13%);
+    --color-teal-gray-11: hsl(174, 14%, 9%);
+
+    --color-cyan-accent-1: hsl(180, 100%, 76%);
+    --color-cyan-accent-2: hsl(180, 100%, 55%);
+    --color-cyan-accent-3: hsl(186, 100, 50%);
+    --color-cyan-accent-4: hsl(186, 100%, 42%); /* Dark mode */
+    --color-cyan-accent-5: hsl(188, 100%, 37%); /* Light mode */
+
+    /* Cyans for light mode */
+    --color-cyan-1: hsl(187, 72%, 93%);
+    --color-cyan-2: hsl(187, 71%, 82%);
+    --color-cyan-3: hsl(187, 72%, 71%);
+    --color-cyan-4: hsl(187, 71%, 59%);
+    --color-cyan-5: hsl(187, 71%, 50%);
+    --color-cyan-6: hsl(187, 100%, 42%);
+    --color-cyan-7: hsl(187, 100%, 38%);
+    --color-cyan-8: hsl(186, 100%, 33%);
+    --color-cyan-9: hsl(185, 100%, 28%);
+    --color-cyan-10: hsl(182, 100%, 20%);
+
+    /* Cyans for dark mode */
+    --color-cyan-1d: hsl(187, 62%, 93%);
+    --color-cyan-2d: hsl(187, 61%, 82%);
+    --color-cyan-3d: hsl(187, 62%, 71%);
+    --color-cyan-4d: hsl(187, 61%, 59%);
+    --color-cyan-5d: hsl(187, 61%, 50%);
+    --color-cyan-6d: hsl(187, 90%, 42%);
+    --color-cyan-7d: hsl(187, 90%, 38%);
+    --color-cyan-8d: hsl(186, 90%, 33%);
+    --color-cyan-9d: hsl(185, 90%, 28%);
+    --color-cyan-10d: hsl(182, 90%, 20%);
+
+    /* Cyan grays for dark mode */
+    --color-cyan-gray-1: hsl(187, 14%, 98%);
+    --color-cyan-gray-2: hsl(187, 14%, 96%);
+    --color-cyan-gray-3: hsl(187, 14%, 93%);
+    --color-cyan-gray-4: hsl(187, 14%, 88%);
+    --color-cyan-gray-5: hsl(187, 14%, 74%);
+    --color-cyan-gray-6: hsl(187, 14%, 62%);
+    --color-cyan-gray-7: hsl(187, 14%, 46%);
+    --color-cyan-gray-8: hsl(187, 14%, 38%);
+    --color-cyan-gray-9: hsl(187, 14%, 26%);
+    --color-cyan-gray-9a: hsl(187, 14%, 23%);
+    --color-cyan-gray-9b: hsl(187, 14%, 20%);
+    --color-cyan-gray-9c: hsl(187, 14%, 17%);
+    --color-cyan-gray-10: hsl(187, 14%, 13%);
+    --color-cyan-gray-11: hsl(187, 14%, 9%);
+
+    /* Blues */
+
+    --color-azure-accent-1: hsl(198, 100%, 75%);
+    --color-azure-accent-2: hsl(199, 100%, 63%);
+    --color-azure-accent-3: hsl(199, 100%, 50%);
+    --color-azure-accent-4: hsl(203, 100%, 46%);
+
+    /* Blues for light mode */
+    --color-blue-1: hsl(205, 87%, 94%);
+    --color-blue-2: hsl(207, 73%, 86%);
+    --color-blue-3: hsl(207, 90%, 77%);
+    --color-blue-4: hsl(207, 89%, 68%);
+    --color-blue-5: hsl(207, 90%, 61%);
+    --color-blue-6: hsl(207, 90%, 54%);
+    --color-blue-7: hsl(208, 79%, 51%);
+    --color-blue-8: hsl(210, 79%, 46%);
+    --color-blue-9: hsl(212, 80%, 42%);
+    --color-blue-10: hsl(216, 85%, 34%);
+
+    /* Blues for dark mode */
+    --color-blue-1d: hsl(205, 67%, 94%);
+    --color-blue-2d: hsl(207, 53%, 86%);
+    --color-blue-3d: hsl(207, 70%, 77%);
+    --color-blue-4d: hsl(207, 69%, 68%);
+    --color-blue-5d: hsl(207, 70%, 61%);
+    --color-blue-6d: hsl(207, 70%, 54%);
+    --color-blue-7d: hsl(208, 59%, 51%);
+    --color-blue-8d: hsl(210, 59%, 46%);
+    --color-blue-9d: hsl(212, 60%, 42%);
+    --color-blue-10d: hsl(216, 65%, 34%);
+
+    --color-blue-accent-1: hsl(217, 100%, 75%);
+    --color-blue-accent-2: hsl(218, 100%, 63%);
+    --color-blue-accent-3: hsl(218, 100%, 58%);
+    --color-blue-accent-4: hsl(224, 100%, 58%);
+
+    /* Blue grays for dark mode */
+    --color-blue-gray-1: hsl(207, 14%, 98%);
+    --color-blue-gray-2: hsl(207, 14%, 96%);
+    --color-blue-gray-3: hsl(207, 14%, 93%);
+    --color-blue-gray-4: hsl(207, 14%, 88%);
+    --color-blue-gray-5: hsl(207, 14%, 74%);
+    --color-blue-gray-6: hsl(207, 14%, 62%);
+    --color-blue-gray-7: hsl(207, 14%, 46%);
+    --color-blue-gray-8: hsl(207, 14%, 38%);
+    --color-blue-gray-9: hsl(207, 14%, 26%);
+    --color-blue-gray-9a: hsl(207, 14%, 23%);
+    --color-blue-gray-9b: hsl(207, 14%, 20%);
+    --color-blue-gray-9c: hsl(207, 14%, 17%);
+    --color-blue-gray-10: hsl(207, 14%, 13%);
+    --color-blue-gray-11: hsl(207, 14%, 9%);
+
+    /* Indigos for light mode */
+    --color-indigo-1: hsl(238, 44%, 94%);
+    --color-indigo-2: hsl(238, 46%, 84%);
+    --color-indigo-3: hsl(238, 47%, 74%);
+    --color-indigo-4: hsl(238, 54%, 65%);
+    --color-indigo-5: hsl(238, 64%, 59%);
+    --color-indigo-6: hsl(238, 65%, 52%);
+    --color-indigo-7: hsl(238, 68%, 48%);
+    --color-indigo-8: hsl(240, 70%, 45%);
+    --color-indigo-9: hsl(243, 75%, 41%);
+    --color-indigo-10: hsl(247, 80%, 35%);
+    --color-indigo-accent-1: hsl(238, 100%, 77);
+    --color-indigo-accent-2: hsl(238, 100%, 67);
+    --color-indigo-accent-3: hsl(238, 100%, 60);
+    --color-indigo-accent-4: hsl(238, 100%, 46);
+
+    /* Indigos for dark mode */
+    --color-indigo-1d: hsl(238, 34%, 94%);
+    --color-indigo-2d: hsl(238, 36%, 84%);
+    --color-indigo-3d: hsl(238, 37%, 74%);
+    --color-indigo-4d: hsl(238, 40%, 65%);
+    --color-indigo-5d: hsl(238, 44%, 59%);
+    --color-indigo-6d: hsl(238, 45%, 52%);
+    --color-indigo-7d: hsl(238, 48%, 48%);
+    --color-indigo-8d: hsl(240, 50%, 45%);
+    --color-indigo-9d: hsl(243, 55%, 41%);
+    --color-indigo-10d: hsl(247, 60%, 35%);
+    --color-indigo-accent-1d: hsl(238, 80%, 77);
+    --color-indigo-accent-2d: hsl(238, 80%, 67);
+    --color-indigo-accent-3d: hsl(238, 80%, 60);
+    --color-indigo-accent-4d: hsl(238, 80%, 46);
+
+    /* Indigo grays for dark mode */
+    --color-indigo-gray-1: hsl(238, 14%, 98%);
+    --color-indigo-gray-2: hsl(238, 14%, 96%);
+    --color-indigo-gray-3: hsl(238, 14%, 93%);
+    --color-indigo-gray-4: hsl(238, 14%, 88%);
+    --color-indigo-gray-5: hsl(238, 14%, 74%);
+    --color-indigo-gray-6: hsl(238, 14%, 62%);
+    --color-indigo-gray-7: hsl(238, 14%, 46%);
+    --color-indigo-gray-8: hsl(238, 14%, 38%);
+    --color-indigo-gray-9: hsl(238, 14%, 26%);
+    --color-indigo-gray-9a: hsl(238, 14%, 23%);
+    --color-indigo-gray-9b: hsl(238, 14%, 20%);
+    --color-indigo-gray-9c: hsl(238, 14%, 17%);
+    --color-indigo-gray-10: hsl(238, 14%, 13%);
+    --color-indigo-gray-11: hsl(238, 14%, 9%);
+
+    /* Purples */
+
+    /* Purples for light mode */
+    --color-purple-1: hsl(264, 45%, 94%);
+    --color-purple-2: hsl(261, 46%, 84%);
+    --color-purple-3: hsl(261, 46%, 74%);
+    --color-purple-4: hsl(262, 47%, 63%);
+    --color-purple-5: hsl(262, 47%, 55%);
+    --color-purple-6: hsl(262, 52%, 47%);
+    --color-purple-7: hsl(260, 54%, 45%);
+    --color-purple-8: hsl(258, 58%, 42%);
+    --color-purple-9: hsl(255, 61%, 39%);
+    --color-purple-10: hsl(251, 69%, 34%);
+    --color-purple-accent-1: hsl(264, 100%, 77%);
+    --color-purple-accent-2: hsl(256, 100%, 65%);
+    --color-purple-accent-3: hsl(259, 100%, 56%);
+    --color-purple-accent-4: hsl(265, 100%, 46%);
+
+    /* Purples for dark mode */
+    --color-purple-1d: hsl(264, 35%, 94%);
+    --color-purple-2d: hsl(261, 36%, 84%);
+    --color-purple-3d: hsl(261, 36%, 74%);
+    --color-purple-4d: hsl(262, 37%, 63%);
+    --color-purple-5d: hsl(262, 37%, 55%);
+    --color-purple-6d: hsl(262, 42%, 47%);
+    --color-purple-7d: hsl(260, 44%, 45%);
+    --color-purple-8d: hsl(258, 48%, 42%);
+    --color-purple-9d: hsl(255, 51%, 39%);
+    --color-purple-10d: hsl(251, 59%, 34%);
+    --color-purple-accent-1d: hsl(264, 80%, 77%);
+    --color-purple-accent-2d: hsl(256, 80%, 65%);
+    --color-purple-accent-3d: hsl(259, 80%, 56%);
+    --color-purple-accent-4d: hsl(265, 80%, 46%);
+
+    /* Purple grays for dark mode */
+    --color-purple-gray-1: hsl(262, 14%, 98%);
+    --color-purple-gray-2: hsl(262, 14%, 96%);
+    --color-purple-gray-3: hsl(262, 14%, 93%);
+    --color-purple-gray-4: hsl(262, 14%, 88%);
+    --color-purple-gray-5: hsl(262, 14%, 74%);
+    --color-purple-gray-6: hsl(262, 14%, 62%);
+    --color-purple-gray-7: hsl(262, 14%, 46%);
+    --color-purple-gray-8: hsl(262, 14%, 38%);
+    --color-purple-gray-9: hsl(262, 14%, 26%);
+    --color-purple-gray-9a: hsl(262, 14%, 23%);
+    --color-purple-gray-9b: hsl(262, 14%, 20%);
+    --color-purple-gray-9c: hsl(262, 14%, 17%);
+    --color-purple-gray-10: hsl(262, 14%, 13%);
+    --color-purple-gray-11: hsl(262, 14%, 9%);
+
+    /* Violets for light mode */
+    --color-violet-1: hsl(292, 44%, 93%);
+    --color-violet-2: hsl(291, 46%, 83%);
+    --color-violet-3: hsl(291, 47%, 71%);
+    --color-violet-4: hsl(291, 47%, 60%);
+    --color-violet-5: hsl(291, 47%, 51%);
+    --color-violet-6: hsl(291, 64%, 42%);
+    --color-violet-7: hsl(287, 65%, 40%);
+    --color-violet-8: hsl(282, 68%, 38%);
+    --color-violet-9: hsl(277, 70%, 35%);
+    --color-violet-10: hsl(267, 75%, 31%);
+    --color-violet-accent-1: hsl(291, 95%, 75%);
+    --color-violet-accent-2: hsl(291, 96%, 62%);
+    --color-violet-accent-3: hsl(291, 100%, 49%);
+    --color-violet-accent-4: hsl(280, 100%, 50%);
+
+    /* Violets for dark mode */
+    --color-violet-1d: hsl(292, 34%, 93%);
+    --color-violet-2d: hsl(291, 36%, 83%);
+    --color-violet-3d: hsl(291, 37%, 71%);
+    --color-violet-4d: hsl(291, 37%, 60%);
+    --color-violet-5d: hsl(291, 37%, 51%);
+    --color-violet-6d: hsl(291, 49%, 42%);
+    --color-violet-7d: hsl(287, 50%, 40%);
+    --color-violet-8d: hsl(282, 53%, 38%);
+    --color-violet-9d: hsl(277, 55%, 35%);
+    --color-violet-10d: hsl(267, 60%, 31%);
+    --color-violet-accent-1d: hsl(291, 75%, 75%);
+    --color-violet-accent-2d: hsl(291, 76%, 62%);
+    --color-violet-accent-3d: hsl(291, 80%, 49%);
+    --color-violet-accent-4d: hsl(280, 80%, 50%);
+
+    /* Violet grays for dark mode */
+    --color-violet-gray-1: hsl(291, 14%, 98%);
+    --color-violet-gray-2: hsl(291, 14%, 96%);
+    --color-violet-gray-3: hsl(291, 14%, 93%);
+    --color-violet-gray-4: hsl(291, 14%, 88%);
+    --color-violet-gray-5: hsl(291, 14%, 74%);
+    --color-violet-gray-6: hsl(291, 14%, 62%);
+    --color-violet-gray-7: hsl(291, 14%, 46%);
+    --color-violet-gray-8: hsl(291, 14%, 38%);
+    --color-violet-gray-9: hsl(291, 14%, 26%);
+    --color-violet-gray-9a: hsl(291, 14%, 23%);
+    --color-violet-gray-9b: hsl(291, 14%, 20%);
+    --color-violet-gray-9c: hsl(291, 14%, 17%);
+    --color-violet-gray-10: hsl(291, 14%, 13%);
+    --color-violet-gray-11: hsl(291, 14%, 9%);
+
+    /* Pinks */
+
+    /* Pink accents for light mode */
+    --color-pink-accent-1: hsl(321, 100%, 77%);
+    --color-pink-accent-2: hsl(321, 100%, 67%);
+    --color-pink-accent-3: hsl(321, 100%, 60%);
+    --color-pink-accent-4: hsl(321, 100%, 46%);
+
+    /* Pink accents for dark mode */
+    --color-pink-accent-1d: hsl(321, 80%, 77%);
+    --color-pink-accent-2d: hsl(321, 80%, 67%);
+    --color-pink-accent-3d: hsl(321, 80%, 60%);
+    --color-pink-accent-4d: hsl(321, 80%, 46%);
+
+    /* For light mode data visualization*/
+    --color-red-1: hsl(1, 73%, 63%);
+    --color-red-2: hsl(4, 80%, 58%);
+    --color-yellow-1: hsl(54, 100%, 67%);
+    --color-yellow-2: hsl(54, 100%, 62%);
+    --color-green-1: hsl(123, 38%, 57%);
+    --color-green-2: hsl(122, 39%, 49%);
+    --color-pink-1: hsl(340, 83%, 66%);
+    --color-pink-2: hsl(340, 82%, 59%);
+    --color-lime-1: hsl(73, 100%, 50%);
+    --color-lime-2: hsl(75, 100%, 46%);
+
+    /* For dark mode data visualization */
+    --color-red-1d: hsl(1, 73%, 63%);
+    --color-red-2d: hsl(4, 80%, 58%);
+    --color-yellow-1d: hsl(54, 90%, 62%);
+    --color-yellow-2d: hsl(49, 88%, 60%);
+    --color-green-1d: hsl(123, 44%, 57%);
+    --color-green-2d: hsl(122, 45%, 49%);
+    --color-pink-1d: hsl(340, 78%, 66%);
+    --color-pink-2d: hsl(340, 67%, 59%);
+    --color-lime-1d: hsl(75, 60%, 55%);
+    --color-lime-2d: hsl(75, 60%, 50%);
+}

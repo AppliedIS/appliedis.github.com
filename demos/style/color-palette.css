@@ -1,0 +1,71 @@
+@import "ais-colors-hsl.css";
+
+/* These colors are for a DARK MODE color palette */
+
+/* Message and State Colors */
+:root {
+    --warning-color: var(--color-sunglow-yellow);
+    --error-color: var(--color-french-rose);
+    --pending-color: var(--color-periwinkle);
+    --active-color: var(--color-viking-blue);
+    --success-color: var(--color-emerald-green);
+    --paused-color: var(--color-gray-6);
+
+    /* Primary and Accent Colors */
+    --primary-color-1: var(--color-blue-1d);
+    --primary-color-2: var(--color-blue-2d);
+    --primary-color-3: var(--color-blue-3d);
+    --primary-color-4: var(--color-blue-4d);
+    --primary-color-5: var(--color-blue-5d);
+    --primary-color-6: var(--color-blue-6d);
+    --primary-color-7: var(--color-blue-7d);
+    --primary-color-8: var(--color-blue-8d);
+    --primary-color-9: var(--color-blue-9d);
+    --primary-color-10: var(--color-blue-10d);
+
+    --accent-color-1: var(--color-orange-accent-1);
+    --accent-color-2: var(--color-orange-accent-2);
+    --accent-color-3: var(--color-orange-accent-3);
+    --accent-color-4: var(--color-orange-accent-4);
+
+    /* Neutral Colors */
+    --neutral-color-1: var(--color-pure-gray-1);
+    --neutral-color-2: var(--color-pure-gray-2);
+    --neutral-color-3: var(--color-pure-gray-3);
+    --neutral-color-4: var(--color-pure-gray-4);
+    --neutral-color-5: var(--color-pure-gray-5);
+    --neutral-color-6: var(--color-pure-gray-6);
+    --neutral-color-7: var(--color-pure-gray-7);
+    --neutral-color-8: var(--color-pure-gray-8);
+    --neutral-color-9: var(--color-pure-gray-9);
+    --neutral-color-9a: var(--color-pure-gray-9a);
+    --neutral-color-9b: var(--color-pure-gray-9b);
+    --neutral-color-9c: var(--color-pure-gray-9c);
+    --neutral-color-10: var(--color-pure-gray-10);
+    --neutral-color-11: var(--color-pure-gray-11);
+
+    /* Layout Colors */
+    --app-background-color: var(--neutral-color-11);
+    --surface-color-1: var(--neutral-color-10);
+    --surface-color-2: var(--neutral-color-9c);
+    --surface-color-3: var(--neutral-color-9b);
+    --surface-color-4: var(--neutral-color-9a);
+    --header-color: var(--surface-color-1);
+    --footer-color: var(--surface-color-1);
+    --sidebar-color: var(--surface-color-2);
+
+    /* Text Colors */
+    --on-surface-color-1: var(--neutral-color-4);
+    --on-surface-color-2: var(--neutral-color-4);
+    --on-surface-color-3: var(--neutral-color-3);
+    --on-surface-color-4: var(--neutral-color-2);
+    --on-header-color: var(--neutral-color-4);
+    --on-footer-color: var(--neutral-color-4);
+    --on-sidebar-color: var(--neutral-color-4);
+
+    /* Text Link Colors (not for button or navigation) */
+    --link-color: var(--accent-color-3);
+    --link-visited-color: var(--accent-color-4);
+    --link-hover-color: var(--accent-color-2);
+    --link-active-color: var(--accent-color-1);
+}
