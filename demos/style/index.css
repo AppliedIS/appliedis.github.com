@@ -63,17 +63,18 @@ body {
 .mdl-grid {
     flex-grow: 1;
     flex-shrink: 1;
+    /*max-height: 60vh;*/
+
     padding-bottom: 1rem;
 }
 /* Cells */
 .mdl-cell {
-    min-height: min-content;
+    min-height: 210px;
     height: 100%;
 }
 
 /* Demo Cards */
 .demo-card-wide.mdl-card {
-    min-height: 200px;
     background: var(--surface-color-1);
     width: 100%;
     height: 100%
