@@ -53,6 +53,12 @@ body {
 .mdl-layout__header-row > .mdl-layout-title {
     color: var(--on-header-color);
 }
+/* AIS Logo */
+.mdl-layout__header-row > img {
+    max-width: 70%;
+    max-height: 70%;
+    padding-right: 1rem;
+}
 
 /* Layout */
 .mdl-layout__content {
@@ -65,7 +71,7 @@ body {
     flex-shrink: 1;
     /*max-height: 60vh;*/
 
-    padding-bottom: 1rem;
+    padding-bottom: 20px;
 }
 /* Cells */
 .mdl-cell {
