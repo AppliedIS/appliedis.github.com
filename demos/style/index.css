@@ -60,17 +60,16 @@ body {
     padding-right: 1rem;
 }
 /* Dark Mode Switch */
-.mdl-switch__track {
-    background-color: var(--neutral-color-8);
+.mdl-switch__track,
+.mdl-switch.is-checked .mdl-switch__track  {
+    background-color: var(--app-background-color);
 }
-.mdl-switch.is-checked .mdl-switch__track {
-    background-color: var(--neutral-color-8);
-}
-.mdl-switch__thumb {
-    background-color: var(--neutral-color-7);
-}
+.mdl-switch__thumb,
 .mdl-switch.is-checked .mdl-switch__thumb {
-    background-color: var(--neutral-color-7);
+    background-color: var(--accent-color-4);
+}
+#theme-icon {
+    padding-left: 20px;
 }
 
 /* Layout */
