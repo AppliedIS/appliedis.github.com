@@ -69,3 +69,93 @@
     --link-hover-color: var(--accent-color-2);
     --link-active-color: var(--accent-color-1);
 }
+
+/* These colors are for a LIGHT MODE color palette */
+
+/* Message and State Colors */
+[data-theme="light"] {
+    --warning-color: var(--color-blaze-orange);
+    --error-color: var(--color-torch-red);
+    --pending-color: var(--color-indigo-6);
+    --active-color: var(--color-azure-accent-4);
+    --success-color: var(--color-laurel-green);
+    --paused-color: var(--color-pure-gray-7);
+
+    /* Primary and Accent Colors */
+    --primary-color-1: var(--color-blue-1);
+    --primary-color-2: var(--color-blue-2);
+    --primary-color-3: var(--color-blue-3);
+    --primary-color-4: var(--color-blue-4);
+    --primary-color-5: var(--color-blue-5);
+    --primary-color-6: var(--color-blue-6);
+    --primary-color-7: var(--color-blue-7);
+    --primary-color-8: var(--color-blue-8);
+    --primary-color-9: var(--color-blue-9);
+    --primary-color-10: var(--color-blue-10);
+
+    --accent-color-1: var(--color-orange-accent-2);
+    --accent-color-2: var(--color-orange-accent-3);
+    --accent-color-3: var(--color-orange-accent-4);
+    --accent-color-4: var(--color-orange-accent-5);
+
+    /* Neutral Colors */
+    --neutral-color-1: var(--color-pure-gray-1);
+    --neutral-color-2: var(--color-pure-gray-2);
+    --neutral-color-3: var(--color-pure-gray-3);
+    --neutral-color-4: var(--color-pure-gray-4);
+    --neutral-color-5: var(--color-pure-gray-5);
+    --neutral-color-6: var(--color-pure-gray-6);
+    --neutral-color-7: var(--color-pure-gray-7);
+    --neutral-color-8: var(--color-pure-gray-8);
+    --neutral-color-9: var(--color-pure-gray-9);
+    --neutral-color-10: var(--color-pure-gray-10);
+
+    /* Layout Colors */
+    --app-background-color: var(--neutral-color-4);
+    --surface-color-1: white;
+    --surface-color-2: white;
+    --header-color: var(--primary-color-9);
+    --footer-color: var(--neutral-color-5);
+    --sidebar-color: var(--neutral-color-9);
+
+    /* Text Colors */
+    --on-surface-color-1: var(--neutral-color-9);
+    --on-surface-color-2: var(--neutral-color-9);
+    --on-header-color: white;
+    --on-footer-color: var(--neutral-color-10);
+    --on-sidebar-color: white;
+
+    /* Text Link Colors (not for button or navigation) */
+    --link-color: var(--color-blue-accent-4);
+    --link-visited-color: var(--color-violet-5);
+    --link-hover-color: var(--color-azure-accent-4);
+    --link-active-color: var(--color-cyan-accent-3);
+
+    /* Medium Data Visualization Colors (in order) */
+    --medium-purple: var(--color-purple-4);
+    --medium-pink: var(--color-pink-1);
+    --medium-orange: var(--color-orange-accent-3);
+    --medium-blue: var(--color-blue-5);
+    --medium-green: var(--color-green-1);
+    --medium-violet: var(--color-violet-4);
+    --medium-yellow: var(--color-yellow-1);
+    --medium-red: var(--color-red-1);
+    --medium-indigo: var(--color-indigo-4);
+    --medium-cyan: var(--color-cyan-4);
+    --medium-lime: var(--color-lime-1);
+    --medium-teal: var(--color-teal-4);
+
+    /* Bright Data Visualization Colors (in order) */
+    --bright-purple: var(--color-purple-6);
+    --bright-pink: var(--color-pink-2);
+    --bright-orange: var(--color-orange-accent-4);
+    --bright-blue: var(--color-blue-7);
+    --bright-green: var(--color-green-2);
+    --bright-violet: var(--color-violet-6);
+    --bright-yellow: var(--color-yellow-2);
+    --bright-red: var(--color-red-2);
+    --bright-indigo: var(--color-indigo-6);
+    --bright-cyan: var(--color-cyan-6);
+    --bright-lime: var(--color-lime-2);
+    --bright-teal: var(--color-teal-6);
+}

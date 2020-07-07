@@ -59,6 +59,19 @@ body {
     max-height: 70%;
     padding-right: 1rem;
 }
+/* Dark Mode Switch */
+.mdl-switch__track {
+    background-color: var(--neutral-color-8);
+}
+.mdl-switch.is-checked .mdl-switch__track {
+    background-color: var(--neutral-color-8);
+}
+.mdl-switch__thumb {
+    background-color: var(--neutral-color-7);
+}
+.mdl-switch.is-checked .mdl-switch__thumb {
+    background-color: var(--neutral-color-7);
+}
 
 /* Layout */
 .mdl-layout__content {
@@ -116,7 +129,7 @@ body {
 }*/
 /* Demo Button */
 .demo-card-wide.mdl-card > .mdl-card__actions {
-    background-color: var(--surface-color-2);
+    background-color: var(--surface-color-1);
     text-align: center;
     bottom: 0;
 }
