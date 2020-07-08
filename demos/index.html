@@ -14,6 +14,7 @@
   <script defer src="./theme-switch.js"></script>
 </head>
 <body>
+  <!-- Demo Images -->
   <style>
     .delta-title {
       background: url('assets/delta-screenshot.png') top left / cover;
@@ -26,14 +27,11 @@
     .sigma-title {
       background: url('assets/sigma-screenshot.jpg') top left / cover;
     }
-
+    /*
     .flock-title {
       background: url('assets/flock-screenshot.jpg') top left / cover;
     }
-
-    .demo-card-wide > .mdl-card__menu {
-      color: #999;
-    }
+    */
   </style>
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -56,117 +54,95 @@
 
     <!-- Content of Page -->
     <main class="mdl-layout__content">
-      <!--<div class="page-content">-->
-        <!-- Main Grid -->
-        <div class="mdl-grid">
-
-          <!-- Demo Cell #1 -->
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-            <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-              <h2 class="mdl-layout__header-row">Eris</h2>
-              <div class="mdl-card__title delta-title"></div>
-              <div class="mdl-card__supporting-text">
-                <p>Eris visualizes the comparison of extracted event output produced by different systems. Analysts can view events correlated by temporal and geospatial characteristics and then vote on whether the extraction is useful. This data is then used to provide machine-learning feedback data to the source algorithm.</p>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="https://appliedis.github.io/demos/eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Demo
-                </a>
-              </div>
+      <!-- Main Grid -->
+      <div class="mdl-grid">
+        <!-- Demo Cell #1 -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Eris</h2>
+            <div class="mdl-card__title delta-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Eris visualizes the comparison of extracted event output produced by different systems. Analysts can view events correlated by temporal and geospatial characteristics and then vote on whether the extraction is useful. This data is then used to provide machine-learning feedback data to the source algorithm.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://appliedis.github.io/demos/eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
             </div>
           </div>
-
-          <!-- Demo Cell #2 -->
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-            <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-              <h2 class="mdl-layout__header-row">Scale</h2>
-              <div class="mdl-card__title scale-title"></div>
-              <div class="mdl-card__supporting-text">
-                <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Demo Cell #3 -->
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-            <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-              <h2 class="mdl-layout__header-row">Scale (2nd Ver.)</h2>
-              <div class="mdl-card__title scale-title"></div>
-              <div class="mdl-card__supporting-text">
-                <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Demo Cell #4 -->
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-            <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-              <h2 class="mdl-layout__header-row">Sigma</h2>
-              <div class="mdl-card__title sigma-title">
-                <h2 class="mdl-card__title-text"></h2>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <h2 class="mdl-card__title-text"></h2>
-                <p>Sigma enables interactive analysis of large, geospatial datasets. The app utilizes WebGL for high performance visualizations.</p>
-                <p>The demo include a sample Landsat data set covering the Great Lakes from 01/01/2015 to 11/01/2015. You can use this
-                <a href="https://appliedis.github.io/demos/sigma/#/?baselayer=standard&locationFormat=dd&start=2015-01-01T11:14:07.714Z&stop=2015-11-01T23:59:59.999Z&enableCoverage=false&coverageOpacity=0.5&band=vis&sensor=0&n=45.92&s=45.27&e=-85.02&w=-85.96">
-                prepopulated query</a> to view the data set.</p>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="https://appliedis.github.io/demos/sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!--Flock Doesn't Work Currently
-          <div class="mdl-cell mdl-cell--4-col">
-            <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-              <div><h2 class="mdl-layout__header-row">Flock</h2></div>
-              <div class="mdl-card__title flock-title">
-                <h2 class="mdl-card__title-text"></h2>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <h2 class="mdl-card__title-text"></h2>
-                Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="https://appliedis.github.io/demos/flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          -->
         </div>
-      <!--</div>-->
-    </main>
-
-    <!-- Footer
-    <footer class="mdl-mini-footer">
-      <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">
-          Applied Information Sciences
+        <!-- Demo Cell #2 -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Scale</h2>
+            <div class="mdl-card__title scale-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
         </div>
-        <ul class="mdl-mini-footer__link-list">
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Privacy & Terms</a></li>
-        </ul>
+        <!-- Demo Cell #3 -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Scale (2nd Ver.)</h2>
+            <div class="mdl-card__title scale-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Demo Cell #4 -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Sigma</h2>
+            <div class="mdl-card__title sigma-title">
+              <h2 class="mdl-card__title-text"></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h2 class="mdl-card__title-text"></h2>
+              <p>Sigma enables interactive analysis of large, geospatial datasets. The app utilizes WebGL for high performance visualizations.</p>
+              <p>The demo include a sample Landsat data set covering the Great Lakes from 01/01/2015 to 11/01/2015. You can use this
+              <a href="https://appliedis.github.io/demos/sigma/#/?baselayer=standard&locationFormat=dd&start=2015-01-01T11:14:07.714Z&stop=2015-11-01T23:59:59.999Z&enableCoverage=false&coverageOpacity=0.5&band=vis&sensor=0&n=45.92&s=45.27&e=-85.02&w=-85.96">
+              prepopulated query</a> to view the data set.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://appliedis.github.io/demos/sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Flock Doesn't Work Currently
+        <div class="mdl-cell mdl-cell--4-col">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <div><h2 class="mdl-layout__header-row">Flock</h2></div>
+            <div class="mdl-card__title flock-title">
+              <h2 class="mdl-card__title-text"></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h2 class="mdl-card__title-text"></h2>
+              Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://appliedis.github.io/demos/flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        -->
       </div>
-      <div class="mdl-mini-footer__right-section"></div>
-    </footer>
-    -->
+    </main>
   </div> 
 </body>
 </html>

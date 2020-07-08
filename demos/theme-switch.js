@@ -1,4 +1,4 @@
-/* Based of of https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
+/* Based of https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
 
 const toggleSwitch = document.querySelector('.mdl-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
