@@ -1,11 +1,11 @@
 {
     "scaleConfigLocal": {
         "urls": {
-            "apiPrefix": "http://scale.dcos.aisohio.net/api/v5/",
+            "apiPrefix": "hhttps://ngageoint.github.io/scale/docs/rest/index.html",
             "overrides": {
-                "status": "http://scale.dcos.aisohio.net/api/v4/"
+                "status": "https://ngageoint.github.io/scale/docs/rest/index.html"
             },
-            "documentation": "http://scale.dcos.aisohio.net/docs"
+            "documentation": "https://ngageoint.github.io/scale/docs/"
         },
         "pollIntervals": {
             "runningJobs": 1000,
