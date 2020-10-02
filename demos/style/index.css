@@ -60,6 +60,14 @@ body {
     max-height: 70%;
     padding-right: 1rem;
 }
+/* Nav/Links */
+nav {
+    padding-right: 20px;
+}
+nav > a {
+    text-decoration: none;
+    color: var(--on-surface-color-4);
+}
 /* Dark Mode Switch */
 .mdl-switch__track,
 .mdl-switch.is-checked .mdl-switch__track  {
@@ -82,7 +90,7 @@ body {
 .mdl-grid {
     flex-grow: 1;
     flex-shrink: 1;
-    /*max-height: 75vh;*/
+    max-height: 75vh;
     padding-bottom: 28px;
 }
 /* Cells */
@@ -107,7 +115,9 @@ body {
 }
 /* Demo Picture */
 .demo-card-wide.mdl-card > .mdl-card__title {
-    flex-basis: 35%;
+    /*flex-basis: 35%;*/
+    flex-basis: 45%;
+    flex-shrink: 2;
 } 
 @media only screen and (max-height: 450px) { 
     .demo-card-wide.mdl-card > .mdl-card__title { 

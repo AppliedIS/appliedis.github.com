@@ -1,0 +1,18 @@
+Ohio Demo Site
+==============
+
+This site is used to display demo's of AIS developed software for clients, job fairs, etc. 
+
+== Demos
+
+=== Scale 5
+Doesn't need require any major changes, make sure documentation link is correct. No backend is required for this demo.
+
+=== Scale 7
+
+=== Eris
+Requires backend support, currently is not fully functional. It has scale depencies for some functionality. A full Scale instance would require a lot of resources so for the demo, a Scale webservice with mock data is likely enough. A geoserver with PostGIS is also needed 
+
+=== Sigma
+Similar to Scale, this
+
