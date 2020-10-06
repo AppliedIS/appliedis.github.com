@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>UI Demos</title>
+  <base href="/demos/">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-light_blue.min.css" />
   <link rel="stylesheet" href="https://use.typekit.net/jju1tsj.css"> <!-- Is this allowed!!! -->
@@ -19,18 +20,21 @@
       background: url('assets/delta-screenshot.png') top left / cover;
     }
 
-    .scale-title {
-      background: url('assets/scale-screenshot.jpg') top left / cover;
+    .scale-5-title {
+      background: url('assets/scale-5-screenshot.jpg') top left / cover;
+    }
+
+    .scale-7-title {
+      background: url('assets/scale-7-screenshot.png') top left / cover;
     }
 
     .sigma-title {
       background: url('assets/sigma-screenshot.jpg') top left / cover;
     }
-    /*
+
     .flock-title {
-      background: url('assets/flock-screenshot.jpg') top left / cover;
+      background: url('assets/flock-screenshot.png') top left / cover;
     }
-    */
   </style>
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -67,7 +71,7 @@
               <p>Eris visualizes the comparison of extracted event output produced by different systems. Analysts can view events correlated by temporal and geospatial characteristics and then vote on whether the extraction is useful. This data is then used to provide machine-learning feedback data to the source algorithm.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://appliedis.github.io/demos/eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a href="/demos/eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Demo
               </a>
             </div>
@@ -76,13 +80,13 @@
         <!-- Demo Cell #2 -->
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-            <h2 class="mdl-layout__header-row">Scale</h2>
-            <div class="mdl-card__title scale-title"></div>
+            <h2 class="mdl-layout__header-row">Scale 5</h2>
+            <div class="mdl-card__title scale-5-title"></div>
             <div class="mdl-card__supporting-text">
               <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a href="/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Demo
               </a>
             </div>
@@ -91,13 +95,13 @@
         <!-- Demo Cell #3 -->
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-            <h2 class="mdl-layout__header-row">Scale (2nd Ver.)</h2>
-            <div class="mdl-card__title scale-title"></div>
+            <h2 class="mdl-layout__header-row">Scale 7</h2>
+            <div class="mdl-card__title scale-7-title"></div>
             <div class="mdl-card__supporting-text">
               <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a href="/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Demo
               </a>
             </div>
@@ -118,31 +122,31 @@
               prepopulated query</a> to view the data set.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://appliedis.github.io/demos/sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a href="/demos/sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Demo
               </a>
             </div>
           </div>
         </div>
-        <!--Flock Doesn't Work Currently
-        <div class="mdl-cell mdl-cell--4-col">
+        <!-- Flock Doesn't Work Currently -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
           <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-            <div><h2 class="mdl-layout__header-row">Flock</h2></div>
+            <h2 class="mdl-layout__header-row">Flock</h2>
             <div class="mdl-card__title flock-title">
               <h2 class="mdl-card__title-text"></h2>
             </div>
             <div class="mdl-card__supporting-text">
               <h2 class="mdl-card__title-text"></h2>
-              Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.
+              <p>Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://appliedis.github.io/demos/flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a href="/demos/flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Demo
               </a>
             </div>
           </div>
         </div>
-        -->
+       
       </div>
     </main>
   </div> 
