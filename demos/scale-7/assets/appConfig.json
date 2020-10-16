@@ -1,0 +1,20 @@
+{
+    "apiDefaultVersion": "v6",
+    "apiPrefix": "/mocks",
+    "apiVersions": [],
+    "authEnabled": false,
+    "authSchemeType": "external",
+    "authSchemeUrl": "/api/login/",
+    "dateFormat": "YYYY-MM-DD HH:mm:ss[Z]",
+    "defaultTheme": "light",
+    "documentation": "http://ngageoint.github.io/scale/docs/index.html",
+    "siloUrl": "/mocks/silo",
+    "themeKey": "scale.theme",
+    "primaryColor": "#017cce",
+    "secondaryLightColor": "#5c97bf",
+    "secondaryDarkColor": "#24567f",
+    "logoImageCss": "",
+    "logoImage": "",
+    "bannerMessage": "",
+    "bannerType": "info"
+}
