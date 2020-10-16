@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - 'scale-7'
-  pull:
+  pull_request:
     branches:
       - 'scale-7' 
     
