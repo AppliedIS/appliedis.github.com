@@ -26,4 +26,4 @@ jobs:
           blob-container-name: '$web'
           folder: '.'
           connection-string: ${{ secrets.CONNECTION_STRING }}
-          remove-existing-files: 'true'
+          remove-existing-files: 'false'
