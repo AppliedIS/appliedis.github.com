@@ -1,6 +1,6 @@
 {
     "apiDefaultVersion": "v6",
-    "apiPrefix": "/mocks",
+    "apiPrefix": "https://scale-7-demo-api.azurewebsites.net/mocks/",
     "apiVersions": [],
     "authEnabled": false,
     "authSchemeType": "external",
