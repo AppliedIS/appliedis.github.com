@@ -73,9 +73,10 @@ nav > a {
 }
 .mdl-layout__drawer {
     background-color: var(--surface-color-2);
-    color: var(--on-surface-color-2);
 }
-.mdl-navigation__link {
+.mdl-layout__drawer .mdl-layout-title,
+.mdl-layout__drawer .mdl-navigation a.mdl-navigation__link {
+    background-color: var(--surface-color-2);
     color: var(--on-surface-color-2);
 }
 @media only screen and (max-width: 550px) {
