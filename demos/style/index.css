@@ -144,7 +144,7 @@ nav > a {
 }
 /* Demo Description */
 .demo-card-wide.mdl-card > .mdl-card__supporting-text {
-    overflow: scroll;
+    overflow: auto;
     flex-grow: 1;
     flex-shrink: 1;
     color: var(--on-surface-color-1);

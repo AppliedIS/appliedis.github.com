@@ -8,11 +8,17 @@ if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (currentTheme === 'dark') {
         document.getElementById("theme-icon").innerHTML= "wb_sunny";
+        localStorage.setItem('theme', 'dark');
         isDark = true;
     }
     else {
         document.getElementById("theme-icon").innerHTML= "brightness_2";
+        localStorage.setItem('theme', 'light');
     }
+}
+else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
 }
 
 function switchTheme(e) {
