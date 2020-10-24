@@ -3,154 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <title>UI Demos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/demos/">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-light_blue.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/jju1tsj.css"> <!-- Is this allowed!!! -->
+  <link rel="stylesheet" href="./style/ais-colors-hsl.css" />
+  <link rel="stylesheet" href="./style/color-palette.css" />
+  <link rel="stylesheet" href="./style/index.css" />
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script defer src="./theme-switch.js"></script>
 </head>
 <body>
+  <!-- Demo Images -->
   <style>
-    html, body {
-      font-family: 'Roboto', sans-serif;
-    }
-    html {
-      font-size: 62.5%;
-    }
-    body {
-      font-size: 1.2rem;
-      background: rgb(69,72,77); /* Old browsers */
-      background: -moz-linear-gradient(top, rgba(69,72,77,1) 30%, rgba(69,72,77,1) 30%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(69,72,77,1) 30%,rgba(69,72,77,1) 30%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(69,72,77,1) 30%,rgba(69,72,77,1) 30%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    }
-
-    .demo-card-wide.mdl-card {
-      width: 100%;
-      min-height: 450px;
-    }
-    .demo-card-wide > .mdl-card__title {
-      color: #333;
-      height: 276px;
-      background-color: #999;
-    }
-    .demo-card-wide > .mdl-card__supporting-text {
-      font-size: 1.4rem;
-      min-height: 125px;
-    }
-    .demo-card-wide > .mdl-card__actions {
-      text-align: center;
-    }
-
-    .mdl-layout__header-row {
-      font-family: 'Roboto Condensed', sans-serif;
-      background-color: #607D8B;
-      color: #fff;
-      padding: 15px;
-      margin: 0px;
-      line-height:40px;
-      font-size: 3rem;
-      height: 50px;
-    }
-
     .delta-title {
-      background: url('assets/delta-screenshot.png') top center / cover;
+      background: url('./assets/delta-screenshot.png') top left / cover;
     }
 
-    .scale-title {
-      background: url('assets/scale-screenshot.jpg') top center / cover;
+    .scale-5-title {
+      background: url('./assets/scale-5-screenshot.jpg') top left / cover;
+    }
+
+    .scale-7-title {
+      background: url('./assets/scale-7-screenshot.png') top left / cover;
     }
 
     .sigma-title {
-      background: url('assets/sigma-screenshot.jpg') top center / cover;
+      background: url('./assets/sigma-screenshot.jpg') top left / cover;
     }
 
     .flock-title {
-      background: url('assets/flock-screenshot.jpg') top center / cover;
+      background: url('./assets/flock-screenshot.png') top left / cover;
     }
 
-    .demo-card-wide > .mdl-card__menu {
-      color: #999;
+    .marketing-title {
+      background: url('./assets/marketing-screenshot.jpg') top left / cover;
     }
   </style>
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-        <div><h2 class="mdl-layout__header-row">Eris</h2></div>
-        <div class="mdl-card__title delta-title">
-          <h2 class="mdl-card__title-text"></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <h2 class="mdl-card__title-text"></h2>
-          Eris visualizes the comparison of extracted event output produced by different systems. Analysts can view events correlated
-          by temporal and geospatial characteristics and then vote on whether the extraction is useful. This data is then used to provide
-          machine-learning feedback data to the source algorithm.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a href="https://appliedis.github.io/demos/eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Demo
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-        <div><h2 class="mdl-layout__header-row">Scale</h2></div>
-        <div class="mdl-card__title scale-title">
-        <h2 class="mdl-card__title-text"></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of
-          algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a href="https://appliedis.github.io/demos/scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Demo
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-        <div><h2 class="mdl-layout__header-row">Sigma</h2></div>
-        <div class="mdl-card__title sigma-title">
-          <h2 class="mdl-card__title-text"></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <h2 class="mdl-card__title-text"></h2>
-          Sigma enables interactive analysis of large, geospatial datasets. The app utilizes WebGL for high
-          performance visualizations.<br />
-          <br />
-          The demo include a sample Landsat data set covering the Great Lakes from 01/01/2015 to 11/01/2015.
-          You can use this
-          <a href="https://appliedis.github.io/demos/sigma/#/?baselayer=standard&locationFormat=dd&start=2015-01-01T11:14:07.714Z&stop=2015-11-01T23:59:59.999Z&enableCoverage=false&coverageOpacity=0.5&band=vis&sensor=0&n=45.92&s=45.27&e=-85.02&w=-85.96">
-            prepopulated query</a> to view the data set.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a href="https://appliedis.github.io/demos/sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Demo
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-        <div><h2 class="mdl-layout__header-row">Flock</h2></div>
-        <div class="mdl-card__title flock-title">
-          <h2 class="mdl-card__title-text"></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <h2 class="mdl-card__title-text"></h2>
-          Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a href="https://appliedis.github.io/demos/flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Demo
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!-- Header -->
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <img src="./assets/AIS-Mark-White-Orange.png" alt="AIS Logo">
+        <span class="mdl-layout-title"><h2>Ohio Demo Site</h2></span>
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation Links -->
+        <nav>
+          <a href="https://www.ais.com/blog/"><h6>Blog</h6></a>
+        </nav>
+        <nav>
+          <a href="https://www.ais.com/contact-us/"><h6>Contact</h6></a>
+        </nav>
+        <!-- Dark Mode Button -->
+        <span>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+            <i id="theme-icon" class="material-icons">brightness_2</i>
+          </button>
+        </span>  
+      </div>
+    </header>
+    <!-- Phone Menue -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Links</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="https://www.ais.com/blog/">Blog</a>
+        <a class="mdl-navigation__link" href="https://www.ais.com/contact-us/">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Content of Page -->
+    <main class="mdl-layout__content">
+      <!-- Main Grid -->
+      <div class="mdl-grid">
+        <!-- Eris Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Eris</h2>
+            <div class="mdl-card__title delta-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Eris visualizes the comparison of extracted event output produced by different systems. Analysts can view events correlated by temporal and geospatial characteristics and then vote on whether the extraction is useful. This data is then used to provide machine-learning feedback data to the source algorithm.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./eris/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Scale 5 Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Scale 5</h2>
+            <div class="mdl-card__title scale-5-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./scale/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Scale 7 Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Scale 7</h2>
+            <div class="mdl-card__title scale-7-title"></div>
+            <div class="mdl-card__supporting-text">
+              <p>Scale enables on-demand, near real-time, automated processing of large, file-based datasets using a dynamic bank of algorithms. Users can monitor cluster health and manage processing pipelines using an interactive Recipe Editor.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./scale-7/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Sigma Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Sigma</h2>
+            <div class="mdl-card__title sigma-title">
+              <h2 class="mdl-card__title-text"></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h2 class="mdl-card__title-text"></h2>
+              <p>Sigma enables interactive analysis of large, geospatial datasets. The app utilizes WebGL for high performance visualizations.</p>
+              <p>The demo include a sample Landsat data set covering the Great Lakes from 01/01/2015 to 11/01/2015. You can use this
+              <a href="https://appliedis.github.io/demos/sigma/#/?baselayer=standard&locationFormat=dd&start=2015-01-01T11:14:07.714Z&stop=2015-11-01T23:59:59.999Z&enableCoverage=false&coverageOpacity=0.5&band=vis&sensor=0&n=45.92&s=45.27&e=-85.02&w=-85.96">
+              prepopulated query</a> to view the data set.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./sigma/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Flock Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Flock</h2>
+            <div class="mdl-card__title flock-title">
+              <h2 class="mdl-card__title-text"></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h2 class="mdl-card__title-text"></h2>
+              Flock is a clustering and classification engine for processing x/y-based signatures, giving intelligence analysts a head start by providing typing information and context around a given event.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./flock/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Marketing Demo -->
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <h2 class="mdl-layout__header-row">Marketing</h2>
+            <div class="mdl-card__title marketing-title">
+              <h2 class="mdl-card__title-text"></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h2 class="mdl-card__title-text"></h2>
+              Marketing material used for NGA. The example below are PDF sheets.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="./marketing/scale-flyer.pdf" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Scale
+              </a>
+            </div>
+            <div class="mdl-card__actions">
+              <a href="./marketing/seed-flyer.pdf" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Seed
+              </a>
+            </div>
+            <div class="mdl-card__actions">
+              <a href="./marketing/bulkhead-flyer.pdf" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Bulkhead
+              </a>
+            </div>
+            <div class="mdl-card__actions">
+              <a href="./marketing/warpgate-flyer.pdf" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Warpgate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div> 
 </body>
 </html>
